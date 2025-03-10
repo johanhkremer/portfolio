@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "@radix-ui/themes/styles.css";
 import { Theme } from "@radix-ui/themes";
+import Navbar from "@/components/server/navbar";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -17,7 +18,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Theme>
-          {children}
+          <div className="container px-20 mx-auto">
+            <Navbar />
+            {children}
+          </div>
+          {/* <ThemePanel /> */}
         </Theme>
       </body>
     </html>

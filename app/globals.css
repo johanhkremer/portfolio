@@ -47,16 +47,8 @@
 
   h6 {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    /* Semibold */
-    font-size: 1.25rem;
-    /* 20px */
-  }
-
-  .h6-regular {
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    /* Regular */
+    /* regular */
     font-size: 1.25rem;
     /* 20px */
   }
