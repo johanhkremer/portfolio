@@ -2,7 +2,7 @@ import { ArrowDown } from 'lucide-react'
 
 export default function HeroSection() {
     return (
-        <section className="flex flex-col justify-between h-[calc(100vh-8rem)]">
+        <section className="flex flex-col justify-between h-[calc(100vh-6rem)]">
             <div className="p-14">
                 <h1>Johan Kremer</h1>
                 <h4>Front End Developer</h4>
