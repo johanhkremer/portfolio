@@ -16,13 +16,19 @@ export default function Navbar() {
             </Flex>
             <ul className='flex flex-row items-center gap-8 text-primary-200'>
                 <li>
-                    <h6>Projects</h6>
+                    <Link href="#projects">
+                        <h6>Projects</h6>
+                    </Link>
                 </li>
                 <li>
-                    <h6>About</h6>
+                    <Link href="#about">
+                        <h6>About</h6>
+                    </Link>
                 </li>
                 <li>
-                    <h6>Contact</h6>
+                    <Link href="#contact">
+                        <h6>Contact</h6>
+                    </Link>
                 </li>
             </ul>
         </nav>
