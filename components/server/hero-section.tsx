@@ -1,4 +1,5 @@
 import { ArrowDown } from 'lucide-react'
+import Link from 'next/link';
 
 export default function HeroSection() {
     return (
@@ -6,7 +7,9 @@ export default function HeroSection() {
             <div className="p-14">
                 <h1>Johan Kremer</h1>
                 <h4>Front End Developer</h4>
-                <h5 className="text-secondary-200 hover:underline">Projects</h5>
+                <Link href="#projects">
+                    <h5 className="text-secondary-200 hover:underline">Projects</h5>
+                </Link>
             </div>
             <div className="flex justify-center">
                 <ArrowDown
