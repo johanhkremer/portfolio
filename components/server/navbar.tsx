@@ -17,17 +17,17 @@ export default function Navbar() {
             <ul className='flex flex-row items-center gap-8 text-primary-200'>
                 <li>
                     <Link href="#projects">
-                        <h6>Projects</h6>
+                        <h6 className='hover:underline'>Projects</h6>
                     </Link>
                 </li>
                 <li>
                     <Link href="#about">
-                        <h6>About</h6>
+                        <h6 className='hover:underline'>About</h6>
                     </Link>
                 </li>
                 <li>
                     <Link href="#contact">
-                        <h6>Contact</h6>
+                        <h6 className='hover:underline'>Contact</h6>
                     </Link>
                 </li>
             </ul>
