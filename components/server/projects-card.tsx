@@ -19,33 +19,14 @@ export default function ProjectsCard() {
                         width={240}
                         height={140}
                         layout="responsive"
+                        className="rounded-lg"
                     />
                 </CardContent>
                 <CardFooter>
-                    <CardTitle>Card Title</CardTitle>
-                    <CardDescription>Card Description</CardDescription>
+                    <CardTitle><h6>Card Title</h6></CardTitle>
+                    <CardDescription><p>Card Description</p></CardDescription>
                 </CardFooter>
             </Card>
         </Link>
-
-
-
-        // <Box maxWidth="300px">
-        //     <Link href="/project/{id}">
-        //         <Card size="2">
-        //             <Inset clip="padding-box" side="top" pb="current">
-        //                 <Image
-        //                     src="/placeholder.png"
-        //                     alt="project image"
-        //                     width={240}
-        //                     height={140}
-        //                     layout="responsive"
-        //                 />
-        //             </Inset>
-        //             <h6 className="font-medium">Project name</h6>
-        //             <p className="font-light">Project description</p>
-        //         </Card>
-        //     </Link>
-        // </Box>
     )
 }
