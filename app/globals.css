@@ -6,49 +6,102 @@
 
 @layer base {
   :root {
-    --background: 192 100% 95%;
-    --foreground: 192 5% 0%;
-    --card: 192 50% 90%;
-    --card-foreground: 192 5% 10%;
-    --popover: 192 100% 95%;
-    --popover-foreground: 192 100% 0%;
+    --background: 0 0% 99%;
+    /* #FCFCFC */
+    --foreground: 0 0% 20.4%;
+    /* #343434 */
+    --card: 0 0% 99%;
+    /* #FCFCFC */
+    --card-foreground: 0 0% 20.4%;
+    /* #343434 */
+
+    --popover: 0 0% 99%;
+    /* #FCFCFC */
+    --popover-foreground: 0 0% 20.4%;
+    /* #343434 */
+
     --primary: 192 35.3% 27.3%;
+    /* #2D545E */
     --primary-foreground: 0 0% 100%;
-    --secondary: 192 30% 70%;
-    --secondary-foreground: 0 0% 0%;
-    --muted: 154 30% 85%;
-    --muted-foreground: 192 5% 35%;
-    --accent: 154 30% 80%;
-    --accent-foreground: 192 5% 10%;
-    --destructive: 0 100% 30%;
-    --destructive-foreground: 192 5% 90%;
-    --border: 192 30% 50%;
-    --input: 192 30% 18%;
+    /* White */
+
+    --secondary: 189 14.1% 45.3%;
+    /* #627E83 */
+    --secondary-foreground: 0 0% 100%;
+    /* White */
+
+    --muted: 0 0% 85.1%;
+    /* Light gray */
+    --muted-foreground: 0 0% 60%;
+    /* #999999 */
+
+    --accent: 350 40.7% 54.3%;
+    /* #BB5A68 */
+    --accent-foreground: 0 0% 100%;
+    /* White */
+
+    --destructive: 349 64.4% 39%;
+    /* #A4243B */
+    --destructive-foreground: 0 0% 100%;
+    /* White */
+
+    --border: 0 0% 60%;
+    /* #999999 */
+    --input: 0 0% 90%;
+    /* Light gray */
     --ring: 192 35.3% 27.3%;
+    /* Same as primary */
     --radius: 1rem;
   }
 
   .dark {
-    --background: 192 50% 5%;
-    --foreground: 192 5% 90%;
-    --card: 192 50% 0%;
-    --card-foreground: 192 5% 90%;
-    --popover: 192 50% 5%;
-    --popover-foreground: 192 5% 90%;
+    /* Dark Mode */
+    --background: 0 0% 10%;
+    /* Dark gray */
+    --foreground: 0 0% 60%;
+    /* #999999 */
+
+    --card: 0 0% 10%;
+    /* Dark gray */
+    --card-foreground: 0 0% 60%;
+    /* #999999 */
+
+    --popover: 0 0% 10%;
+    /* Dark gray */
+    --popover-foreground: 0 0% 60%;
+    /* #999999 */
+
     --primary: 192 35.3% 27.3%;
+    /* #2D545E */
     --primary-foreground: 0 0% 100%;
-    --secondary: 192 30% 10%;
+    /* White */
+
+    --secondary: 189 14.1% 25%;
+    /* Darker teal */
     --secondary-foreground: 0 0% 100%;
-    --muted: 154 30% 15%;
-    --muted-foreground: 192 5% 60%;
-    --accent: 154 30% 15%;
-    --accent-foreground: 192 5% 90%;
-    --destructive: 0 100% 30%;
-    --destructive-foreground: 192 5% 90%;
-    --border: 192 30% 18%;
-    --input: 192 30% 18%;
+    /* White */
+
+    --muted: 0 0% 20%;
+    /* #343434 */
+    --muted-foreground: 0 0% 70%;
+    /* Lighter gray */
+
+    --accent: 349 64.4% 39%;
+    /* #A4243B */
+    --accent-foreground: 0 0% 100%;
+    /* White */
+
+    --destructive: 349 64.4% 39%;
+    /* #A4243B */
+    --destructive-foreground: 0 0% 100%;
+    /* White */
+
+    --border: 0 0% 30%;
+    /* Dark gray */
+    --input: 0 0% 15%;
+    /* Very dark gray */
     --ring: 192 35.3% 27.3%;
-    --radius: 1rem;
+    /* Same as primary */
   }
 
   h1 {
