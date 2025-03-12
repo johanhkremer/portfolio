@@ -1,6 +1,6 @@
 import React from 'react'
-import BadgeComponent from './badge'
 import { Separator } from '../ui/separator'
+import { Badge } from '../ui/badge'
 
 export default function AboutSection() {
     const skills = [
@@ -43,7 +43,7 @@ export default function AboutSection() {
                 <h5>Skills</h5>
                 <ul className='flex flex-wrap gap-2 max-w-[60vw]'>
                     {skills.map(skill => (
-                        <li key={skill}><BadgeComponent text={skill} /> </li>
+                        <li key={skill}><Badge>{skill}</Badge></li>
                     ))}
                 </ul>
             </div>
