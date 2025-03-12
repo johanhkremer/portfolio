@@ -1,6 +1,6 @@
-import { Separator } from '@radix-ui/themes'
 import React from 'react'
 import BadgeComponent from './badge'
+import { Separator } from '../ui/separator'
 
 export default function AboutSection() {
     const skills = [
@@ -26,7 +26,7 @@ export default function AboutSection() {
         <section id="about" className='min-h-screen p-8'>
             <h3>About</h3>
             <div className='py-8'>
-                <Separator orientation="horizontal" size="4" />
+                <Separator />
             </div>
             <div className='flex flex-col gap-8'>
                 <div className='flex flex-col gap-4'>
