@@ -1,7 +1,7 @@
-import { Separator } from "@radix-ui/themes"
 import Image from "next/image"
 import Link from "next/link"
 import projects from "../../../projects/projects.json"
+import { Separator } from "@/components/ui/separator"
 
 interface ProjectPageProps {
     params: {
@@ -24,7 +24,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         <>
             <h3>{title}</h3>
             <div className='py-8'>
-                <Separator orientation="horizontal" size="4" />
+                <Separator />
             </div>
             <div className="flex flexrow">
                 <div className="flex flex-col">
