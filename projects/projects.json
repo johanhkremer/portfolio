@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "title": "My Awesome Project",
+        "shortDescription": "A web application that streamlines task management.",
+        "description": "This project is a web application designed to help users manage their daily tasks efficiently. It offers features such as task categorization, deadlines, and reminders.",
+        "githublink": "https://github.com/username/my-awesome-project",
+        "images": [
+            "https://picsum.photos/200",
+            "https://picsum.photos/201",
+            "https://picsum.photos/202"
+        ],
+        "link": "https://my-awesome-project.com",
+        "tags": [
+            "Productivity",
+            "Web Application",
+            "Task Management"
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Another Cool Project",
+        "shortDescription": "An innovative solution for real-time data analysis.",
+        "description": "This project provides tools for analyzing data streams in real-time, offering insights and visualizations to help businesses make informed decisions.",
+        "githublink": "https://github.com/username/another-cool-project",
+        "images": [
+            "https://picsum.photos/203",
+            "https://picsum.photos/204",
+            "https://picsum.photos/205"
+        ],
+        "link": "https://another-cool-project.com",
+        "tags": [
+            "Data Analysis",
+            "Real-Time",
+            "Visualization"
+        ]
+    }
+]
