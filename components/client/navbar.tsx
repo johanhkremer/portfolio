@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from 'next/link'
+import HamburgerMenu from './hamburger-menu';
 
 export default function Navbar() {
     // Scroll-hanterare
@@ -46,7 +47,7 @@ export default function Navbar() {
                     <AvatarFallback>JK</AvatarFallback>
                 </Avatar>
             </Link>
-            <ul className='flex flex-row items-center gap-8 text-primary-200'>
+            <ul className='hidden md:flex flex-row items-center gap-8 text-primary-200'>
                 {['projects', 'about', 'contact'].map((section) => (
                     <li key={section}>
                         <Link
@@ -59,6 +60,9 @@ export default function Navbar() {
                     </li>
                 ))}
             </ul>
+            <div className='md:hidden'>
+                <HamburgerMenu />
+            </div>
         </nav>
     )
 }

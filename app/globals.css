@@ -51,7 +51,7 @@
     /* Light gray */
     --ring: 192 35.3% 27.3%;
     /* Same as primary */
-    --radius: 1rem;
+    --radius: 0.5rem;
   }
 
   .dark {
@@ -160,7 +160,7 @@
 
   p {
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     /* Regular */
     font-size: 1rem;
     /* 16px */

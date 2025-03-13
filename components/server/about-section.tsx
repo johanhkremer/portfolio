@@ -43,7 +43,7 @@ export default function AboutSection() {
                 <h5>Skills</h5>
                 <ul className='flex flex-wrap gap-2 max-w-[60vw]'>
                     {skills.map(skill => (
-                        <li key={skill}><Badge>{skill}</Badge></li>
+                        <li key={skill}><Badge><p className='font-extralight'>{skill}</p></Badge></li>
                     ))}
                 </ul>
             </div>

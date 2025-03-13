@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/client/navbar";
 import Footer from "@/components/server/footer";
 import { Toaster } from "@/components/ui/sonner";
+import SocialSidebar from "@/components/client/social-sidebar";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -21,6 +22,7 @@ export default function RootLayout({
           <header className="px-8">
             <Navbar />
           </header>
+          <SocialSidebar />
           <main className="flex-grow px-14">
             {children}
           </main>
