@@ -19,11 +19,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="flex flex-col min-h-screen">
-          <header className="px-8">
+          <header className="px-4 sm:px-6 md-px-8">
             <Navbar />
           </header>
-          <SocialSidebar />
-          <main className="flex-grow px-14">
+          <div className="hidden md:block">
+            <SocialSidebar />
+          </div>
+          <main className="flex-grow px-4 sm:px-6 md:px-10 lg:px-14">
             {children}
           </main>
           <footer>

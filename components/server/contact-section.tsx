@@ -8,7 +8,7 @@ export default function ContactSection() {
             <h3>Contact</h3>
             <div className='py-8'>
                 <Separator />
-                <div className='pt-8 max-w-[30vw] mx-auto'>
+                <div className="pt-8 w-full max-w-md mx-auto">
                     <ContactForm />
                 </div>
             </div>

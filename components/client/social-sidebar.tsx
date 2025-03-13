@@ -17,7 +17,7 @@ export default function SocialSidebar() {
     const socialLinks: SocialLink[] = [
         {
             name: "GitHub",
-            iconSrc: "/logos/GitHub-Mark-White.svg",
+            iconSrc: "/logos/github-mark-white.png",
             href: "https://github.com/yourusername",
         },
         {
@@ -30,7 +30,7 @@ export default function SocialSidebar() {
     return (
         <div
             className={cn(
-                "fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4 p-3 bg-primary-200 border-l border-y border-primary-300 rounded-l-lg shadow-md transition-all duration-300",
+                "fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4 p-3 bg-primary-200 border-l border-y border-primary-100/30 rounded-l-lg shadow-md transition-all duration-300",
                 isExpanded ? "w-36" : "w-12",
             )}
             onMouseEnter={() => setIsExpanded(true)}
@@ -42,19 +42,19 @@ export default function SocialSidebar() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-background-100 hover:text-background/80 transition-colors"
+                    className="flex items-center gap-3 text-primary-foreground hover:text-white/70 transition-colors"
                 >
                     <div className="flex-shrink-0 w-5 h-5 relative">
                         <Image
                             src={link.iconSrc || "/placeholder.svg"}
                             alt={link.name}
                             fill
-                            className="object-contain brightness-0 invert"
+                            className="object-contain brightness-0 invert" // Gör SVG-ikonerna vita
                         />
                     </div>
                     <span
                         className={cn(
-                            "whitespace-nowrap transition-opacity duration-300 font-medium",
+                            "whitespace-nowrap transition-opacity duration-300 font-poppins font-medium",
                             isExpanded ? "opacity-100" : "opacity-0",
                         )}
                     >
@@ -65,4 +65,3 @@ export default function SocialSidebar() {
         </div>
     )
 }
-

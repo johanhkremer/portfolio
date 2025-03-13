@@ -12,10 +12,12 @@ export default function HeroSection() {
                 </Link>
             </div>
             <div className="flex justify-center">
-                <ArrowDown
-                    size={48}
-                    className="animate-bounce text-primary-200"
-                />
+                <Link href="#projects">
+                    <ArrowDown
+                        size={48}
+                        className="animate-bounce text-primary-200"
+                    />
+                </Link>
             </div>
         </section>
     );
