@@ -18,12 +18,12 @@ export default function SocialSidebar() {
         {
             name: "GitHub",
             iconSrc: "/logos/github-mark-white.png",
-            href: "https://github.com/yourusername",
+            href: "https://github.com/johanhkremer",
         },
         {
             name: "LinkedIn",
             iconSrc: "/logos/InBug-White.png",
-            href: "https://linkedin.com/in/yourusername",
+            href: "https://www.linkedin.com/in/johan-kremer/",
         },
     ]
 
