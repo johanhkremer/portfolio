@@ -49,7 +49,7 @@ export default function SocialSidebar() {
                             src={link.iconSrc || "/placeholder.svg"}
                             alt={link.name}
                             fill
-                            className="object-contain brightness-0 invert" // Gör SVG-ikonerna vita
+                            className="object-contain brightness-0 invert"
                         />
                     </div>
                     <span

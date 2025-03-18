@@ -1,38 +1,43 @@
 [
     {
         "id": "1",
-        "title": "My Awesome Project",
-        "shortDescription": "A web application that streamlines task management.",
-        "description": "This project is a web application designed to help users manage their daily tasks efficiently. It offers features such as task categorization, deadlines, and reminders.",
-        "githublink": "https://github.com/username/my-awesome-project",
-        "images": [
-            "https://picsum.photos/200",
-            "https://picsum.photos/201",
-            "https://picsum.photos/202"
-        ],
-        "link": "https://my-awesome-project.com",
-        "tags": [
-            "Productivity",
-            "Web Application",
-            "Task Management"
-        ]
+        "title": "Star Wars encyclopedia",
+        "image": "/projects/starwars-encyclopedia-1-netlify-app-1024x768desktop.png",
+        "shortDescription": "A Star Wars encyclopedia built with React and SCSS.",
+        "githublink": "https://github.com/johanhkremer/star-wars-encyclopedia",
+        "link": "https://starwars-encyclopedia-1.netlify.app/"
     },
     {
         "id": "2",
-        "title": "Another Cool Project",
-        "shortDescription": "An innovative solution for real-time data analysis.",
-        "description": "This project provides tools for analyzing data streams in real-time, offering insights and visualizations to help businesses make informed decisions.",
-        "githublink": "https://github.com/username/another-cool-project",
-        "images": [
-            "https://picsum.photos/203",
-            "https://picsum.photos/204",
-            "https://picsum.photos/205"
-        ],
-        "link": "https://another-cool-project.com",
-        "tags": [
-            "Data Analysis",
-            "Real-Time",
-            "Visualization"
-        ]
+        "title": "My movie database",
+        "image": "/projects/my-movie-database-1-netlify-app-1024x768desktop.png",
+        "shortDescription": "A movie database built with React and SCSS.",
+        "githublink": "https://github.com/johanhkremer/my-movie-database",
+        "link": "https://my-movie-database-1.netlify.app/"
+    },
+    {
+        "id": "3",
+        "title": "React Memory Game",
+        "image": "/projects/react-memory-fantasy-netlify-app-1024x768desktop.png",
+        "shortDescription": "A memory game built with React and SCSS.",
+        "githublink": "https://github.com/johanhkremer/react-memory",
+        "link": "https://react-memory-fantasy.netlify.app/"
+    },
+    {
+        "id": "4",
+        "title": "React Weather App",
+        "image": "/projects/react-weather-app-1-netlify-app-1024x768desktop.png",
+        "shortDescription": "A weather app built with React and SCSS.",
+        "githublink": "",
+        "link": "https://react-weather-app-1.netlify.app/"
+    },
+    {
+        "id": "5",
+        "title": "Portfolio Website",
+        "image": "/projects/portfolio.png",
+        "shortDescription": "Read about how I made this awsesome website.",
+        "githublink": "",
+        "images": [],
+        "link": "/projects/portfolio"
     }
 ]
