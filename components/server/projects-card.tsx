@@ -27,32 +27,35 @@ export default function ProjectsCard({
 }: ProjectsCardProps) {
     return (
         <Card>
-            <CardContent>
-                <Image
-                    src={image}
-                    alt="project image"
-                    width={240}
-                    height={140}
-                    layout="responsive"
-                    className="outline outline-[0.5px] outline-text-100"
-                />
-            </CardContent>
-            <CardFooter>
-                <CardTitle><h6>{title}</h6></CardTitle>
-                <CardDescription><p>{shortDescription}</p></CardDescription>
-                <div className="flex flex-row justify-end gap-2 pt-2">
-                    <Link href={githublink}>
-                        <Button variant={"default"} className="w-auto">
-                            Visit Github
-                        </Button>
-                    </Link>
-                    <Link href={link}>
-                        <Button variant={"secondary"} className="w-auto">
-                            Visit Site
-                        </Button>
-                    </Link>
-                </div>
-            </CardFooter>
+            <Image
+                src={image}
+                alt="project image"
+                width={240}
+                height={140}
+                layout="responsive"
+                className="outline outline-[0.5px] outline-text-100"
+            />
+            <div className="flex flex-col py-4 px-2 gap-4 h-full">
+                <CardContent className="flex flex-col gap-2 flex-1">
+                    <CardTitle><h6>{title}</h6></CardTitle>
+                    <CardDescription><p>{shortDescription}</p></CardDescription>
+                </CardContent>
+                <CardFooter>
+                    <div className="flex flex-row justify-end gap-2 pt-2">
+                        {githublink && <Link href={githublink}>
+                            <Button variant={"default"} className="w-auto">
+                                Visit Github
+                            </Button>
+                        </Link>
+                        }
+                        <Link href={link}>
+                            <Button variant={"secondary"} className="w-auto">
+                                {githublink ? "Visit Site" : "Visit project page"}
+                            </Button>
+                        </Link>
+                    </div>
+                </CardFooter>
+            </div>
         </Card>
     )
 }

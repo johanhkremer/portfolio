@@ -1,25 +1,11 @@
 import Link from "next/link"
-import projects from "../../../projects/projects.json"
 import { Separator } from "@/components/ui/separator"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-interface ProjectPageProps {
-    params: {
-        id: string
-    }
-}
+export default async function ProjectPage() {
 
-export default async function ProjectPage({ params }: ProjectPageProps) {
-
-    const { id } = await params
-    const project = projects.find(project => project.id === id)
-
-    const tags: string[] = ["tripp", "trapp", "trull"]
-
-    if (!project) {
-        return <div>Project not found</div>
-    }
+    const tags: string[] = ["Next.js", "React", "Tailwind", "Auth.js", "figma"]
 
     return (
         <>

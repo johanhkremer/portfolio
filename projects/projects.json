@@ -3,7 +3,7 @@
         "id": "1",
         "title": "Star Wars encyclopedia",
         "image": "/projects/starwars-encyclopedia-1-netlify-app-1024x768desktop.png",
-        "shortDescription": "A Star Wars encyclopedia built with React and SCSS.",
+        "shortDescription": "Learn more about a galaxy far, far away.",
         "githublink": "https://github.com/johanhkremer/star-wars-encyclopedia",
         "link": "https://starwars-encyclopedia-1.netlify.app/"
     },
@@ -11,7 +11,7 @@
         "id": "2",
         "title": "My movie database",
         "image": "/projects/my-movie-database-1-netlify-app-1024x768desktop.png",
-        "shortDescription": "A movie database built with React and SCSS.",
+        "shortDescription": "Grab your popcorn!",
         "githublink": "https://github.com/johanhkremer/my-movie-database",
         "link": "https://my-movie-database-1.netlify.app/"
     },
@@ -19,25 +19,24 @@
         "id": "3",
         "title": "React Memory Game",
         "image": "/projects/react-memory-fantasy-netlify-app-1024x768desktop.png",
-        "shortDescription": "A memory game built with React and SCSS.",
+        "shortDescription": "Match fast before you forget!",
         "githublink": "https://github.com/johanhkremer/react-memory",
         "link": "https://react-memory-fantasy.netlify.app/"
-    },
-    {
-        "id": "4",
-        "title": "React Weather App",
-        "image": "/projects/react-weather-app-1-netlify-app-1024x768desktop.png",
-        "shortDescription": "A weather app built with React and SCSS.",
-        "githublink": "",
-        "link": "https://react-weather-app-1.netlify.app/"
     },
     {
         "id": "5",
         "title": "Portfolio Website",
         "image": "/projects/portfolio.png",
-        "shortDescription": "Read about how I made this awsesome website.",
+        "shortDescription": "Behind the scenes of my digital portfolio!",
         "githublink": "",
-        "images": [],
+        "link": "/projects/portfolio"
+    },
+    {
+        "id": "6",
+        "title": "Kitchen Quick",
+        "image": "/projects/kitchen-quick/kitchen-quick-7.png",
+        "shortDescription": "What’s for dinner? Let’s find out!",
+        "githublink": "",
         "link": "/projects/portfolio"
     }
 ]
