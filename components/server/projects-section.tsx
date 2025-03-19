@@ -5,6 +5,10 @@ import projects from '../../projects/projects.json'
 
 export default function ProjectSection() {
 
+    const sortedProjects = [...projects].sort((a, b) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+
     return (
         <section id="projects" className='min-h-screen p-8'>
             <h3>Projects</h3>
@@ -12,7 +16,7 @@ export default function ProjectSection() {
                 <Separator />
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-                {projects.map(project => (
+                {sortedProjects.map(project => (
                     <ProjectsCard
                         key={project.id}
                         id={project.id}

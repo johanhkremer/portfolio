@@ -42,17 +42,27 @@ export default function ProjectsCard({
                 </CardContent>
                 <CardFooter>
                     <div className="flex flex-row justify-end gap-2 pt-2">
-                        {githublink && <Link href={githublink}>
-                            <Button variant={"default"} className="w-auto">
-                                Visit Github
-                            </Button>
-                        </Link>
+                        {githublink
+                            ? <Link
+                                href={githublink}
+                                target="_blank">
+                                <Button variant={"default"} className="w-auto">
+                                    Visit Github
+                                </Button>
+                            </Link>
+                            : <Link href={link}>
+                                <Button variant={"secondary"} className="w-auto">
+                                    Visit project page
+                                </Button>
+                            </Link>
                         }
-                        <Link href={link}>
+                        {githublink && <Link
+                            href={link}
+                            target="_blank">
                             <Button variant={"secondary"} className="w-auto">
-                                {githublink ? "Visit Site" : "Visit project page"}
+                                Visit Site
                             </Button>
-                        </Link>
+                        </Link>}
                     </div>
                 </CardFooter>
             </div>

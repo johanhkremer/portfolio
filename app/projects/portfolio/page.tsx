@@ -28,7 +28,10 @@ export default async function ProjectPage() {
                         ))}
                     </ul>
                     <h5>Description</h5>
-                    <Link href="https://github.com/johanhkremer/portfolio">
+                    <Link
+                        href="https://github.com/johanhkremer/portfolio"
+                        target="_blank"
+                    >
                         <p className="text-secondary-200 hover:underline">Project on Github</p>
                     </Link>
                     <p>I designed this portfolio to showcase skills I&apos;ve acquired in web development while maintaining a minimalist aesthetic with intentional white space. The project began in Figma with a style guide, which streamlined design decisions and ensured visual consistency throughout the development process.</p>

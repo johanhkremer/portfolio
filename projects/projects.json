@@ -1,6 +1,7 @@
 [
     {
         "id": "1",
+        "date": "2024-05-17",
         "title": "Star Wars encyclopedia",
         "image": "/projects/starwars-encyclopedia-1-netlify-app-1024x768desktop.png",
         "shortDescription": "Learn more about a galaxy far, far away.",
@@ -9,6 +10,7 @@
     },
     {
         "id": "2",
+        "date": "2024-06-10",
         "title": "My movie database",
         "image": "/projects/my-movie-database-1-netlify-app-1024x768desktop.png",
         "shortDescription": "Grab your popcorn!",
@@ -17,6 +19,7 @@
     },
     {
         "id": "3",
+        "date": "2024-06-19",
         "title": "React Memory Game",
         "image": "/projects/react-memory-fantasy-netlify-app-1024x768desktop.png",
         "shortDescription": "Match fast before you forget!",
@@ -24,7 +27,8 @@
         "link": "https://react-memory-fantasy.netlify.app/"
     },
     {
-        "id": "5",
+        "id": "4",
+        "date": "2025-01-27",
         "title": "Portfolio Website",
         "image": "/projects/portfolio.png",
         "shortDescription": "Behind the scenes of my digital portfolio!",
@@ -32,7 +36,8 @@
         "link": "/projects/portfolio"
     },
     {
-        "id": "6",
+        "id": "5",
+        "date": "2025-01-07",
         "title": "Kitchen Quick",
         "image": "/projects/kitchen-quick/kitchen-quick-7.png",
         "shortDescription": "What’s for dinner? Let’s find out!",
