@@ -43,5 +43,14 @@
         "shortDescription": "What’s for dinner? Let’s find out!",
         "githublink": "",
         "link": "/projects/kitchen-quick"
+    },
+    {
+        "id": "6",
+        "date": "2023-12-01",
+        "title": "Flag Quiz",
+        "image": "/projects/flag-quiz.png",
+        "shortDescription": "My first ever JavaScript project.",
+        "githublink": "https://github.com/johanhkremer/country-quiz",
+        "link": "https://flagquizzz.netlify.app/"
     }
 ]
