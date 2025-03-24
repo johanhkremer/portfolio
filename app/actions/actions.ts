@@ -25,7 +25,7 @@ export async function sendContactEmail(formData: z.infer<typeof formSchema>) {
 
         // Send the email
         await resend.emails.send({
-            from: "Contact Form <onboarding@resend.dev>",
+            from: "Contact Form from portfolio <onboarding@resend.dev>",
             to: "johan.h.kremer@gmail.com",
             subject: `New contact form submission from ${name}`,
             text: `

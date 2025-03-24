@@ -42,7 +42,7 @@ export default function ContactForm() {
         try {
             await sendContactEmail(values)
 
-            toast.message("Message sent!", {
+            toast.success("Message sent!", {
                 description: "I'll get back to you as soon as possible.",
             })
 
