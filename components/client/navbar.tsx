@@ -3,7 +3,7 @@
 import { useEffect } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from 'next/link'
-import HamburgerMenu from './hamburger-menu';
+import HamburgerMenu from '../server/hamburger-menu';
 
 export default function Navbar() {
     // Scroll-hanterare

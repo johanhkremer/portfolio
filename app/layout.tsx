@@ -25,7 +25,7 @@ export default function RootLayout({
           <div className="hidden md:block">
             <SocialSidebar />
           </div>
-          <main className="flex-grow px-4 sm:px-6 md:px-14 lg:px-32">
+          <main className="flex-grow px-4 sm:px-6 md:px-14 xl:max-w-7xl xl:mx-auto">
             {children}
           </main>
           <footer>
