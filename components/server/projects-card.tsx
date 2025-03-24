@@ -21,7 +21,6 @@ interface ProjectsCardProps {
 }
 
 export default function ProjectsCard({
-    date,
     title,
     image,
     link,
@@ -42,7 +41,6 @@ export default function ProjectsCard({
             />
             <div className="flex flex-col py-4 px-4 gap-4 h-full">
                 <CardContent className="flex flex-col gap-2 flex-1">
-                    <p className="text-xs text-text-100">First git commit: {date}</p>
                     <CardTitle><h6>{title}</h6></CardTitle>
                     <CardDescription>
                         <p>{shortDescription}</p>

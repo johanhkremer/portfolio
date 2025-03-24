@@ -6,6 +6,8 @@ import {
     TooltipProvider,
     TooltipTrigger,
 } from "@/components/ui/tooltip"
+import linkedIn from "@/public/logos/InBug-White.png"
+import gitHub from "@/public/logos/github-mark-white.png"
 
 export default function Footer() {
     return (
@@ -19,10 +21,11 @@ export default function Footer() {
                                 target="_blank"
                             >
                                 <Image
-                                    src='/logos/github-mark-white.svg'
+                                    src={gitHub}
                                     alt='logo'
-                                    width={100}
-                                    height={100}
+                                    width={40}
+                                    height={40}
+                                    placeholder="blur"
                                     className="w-10 h-auto"
                                 />
                             </Link>
@@ -41,10 +44,11 @@ export default function Footer() {
                                 target="_blank"
                             >
                                 <Image
-                                    src='/logos/inBug-White.png'
+                                    src={linkedIn}
                                     alt='logo'
-                                    width={100}
-                                    height={100}
+                                    width={40}
+                                    height={40}
+                                    placeholder="blur"
                                     className="w-10 h-auto"
                                 />
                             </Link>

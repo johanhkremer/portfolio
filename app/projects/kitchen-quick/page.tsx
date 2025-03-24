@@ -20,7 +20,7 @@ export default async function KitchenQuickPage() {
             <div className='py-8'>
                 <Separator />
             </div>
-            <div className="flex flex-col gap-14 items-center w-full px-4 pb-6">
+            <div className="flex flex-col gap-14 items-center w-full pb-6">
                 <div className="flex flex-col gap-8 w-full max-w-[600px]">
                     <h5>Tools used</h5>
                     <ul className="flex flex-row flex-wrap gap-4">

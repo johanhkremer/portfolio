@@ -8,7 +8,7 @@ export default function HamburgerMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <Menu className="text-primary-200 size-14" />
+        <Menu className="text-primary-200 size-10" />
       </DropdownMenuTrigger>
       <DropdownMenuContent className="flex flex-col py-4 gap-y-4">
         <DropdownMenuItem>

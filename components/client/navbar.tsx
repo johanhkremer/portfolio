@@ -1,22 +1,45 @@
 'use client'
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from 'next/link'
 import HamburgerMenu from '../server/hamburger-menu';
 
 export default function Navbar() {
-    // Scroll-hanterare
+    const pathname = usePathname();
+    const isHomePage = pathname === '/';
+
     const smoothScroll = (e: React.MouseEvent, targetId: string) => {
         e.preventDefault();
-        const target = document.getElementById(targetId);
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-            window.history.pushState(null, '', `/#${targetId}`);
+
+        if (isHomePage) {
+            // If the user is already on the homepage, scroll directly
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                window.history.pushState(null, '', `/#${targetId}`);
+            }
+        } else {
+            // If the user is not on the homepage, add the target to the URL and let
+            // useEffect handle the scrolling when we land on the homepage
+            window.location.href = `/#${targetId}`;
         }
     };
 
     useEffect(() => {
+        // Check if there is a hash in the URL when the page loads
+        const hash = window.location.hash.replace('#', '');
+        if (hash && isHomePage) {
+            const target = document.getElementById(hash);
+            if (target) {
+                // Small timeout to ensure the DOM is fully loaded
+                setTimeout(() => {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
+            }
+        }
+
         const handleIntersection = (entries: IntersectionObserverEntry[]) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
@@ -37,7 +60,7 @@ export default function Navbar() {
         });
 
         return () => observer.disconnect();
-    }, []);
+    }, [isHomePage]);
 
     return (
         <nav className='flex flex-row py-4 justify-between items-center'>
@@ -51,7 +74,7 @@ export default function Navbar() {
                 {['projects', 'about', 'contact'].map((section) => (
                     <li key={section}>
                         <Link
-                            href={`#${section}`}
+                            href={isHomePage ? `#${section}` : `/#${section}`}
                             onClick={(e) => smoothScroll(e, section)}
                             scroll={false}
                         >
