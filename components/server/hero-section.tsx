@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function HeroSection() {
     return (
         <section id="hero" className="flex flex-col justify-between h-[calc(100vh-6rem)]">
-            <div className="flex flex-col space-y-4 pl-36 pt-24">
+            <div className="flex flex-col space-y-4 pl-0 pt-14 md:pl-36 md:pt-24">
                 <h1>Johan Kremer</h1>
                 <h4>Front End Developer</h4>
                 <Link href="#projects">

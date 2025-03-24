@@ -11,6 +11,8 @@ import { Button } from "../ui/button";
 
 interface ProjectsCardProps {
     id: string
+    date: string
+    inProgress: boolean
     title: string
     image: string
     link: string
@@ -19,6 +21,7 @@ interface ProjectsCardProps {
 }
 
 export default function ProjectsCard({
+    date,
     title,
     image,
     link,
@@ -30,6 +33,8 @@ export default function ProjectsCard({
             <Image
                 src={image}
                 alt="project image"
+                placeholder="blur"
+                blurDataURL={image}
                 width={240}
                 height={140}
                 layout="responsive"
@@ -37,8 +42,11 @@ export default function ProjectsCard({
             />
             <div className="flex flex-col py-4 px-4 gap-4 h-full">
                 <CardContent className="flex flex-col gap-2 flex-1">
+                    <p className="text-xs text-text-100">First git commit: {date}</p>
                     <CardTitle><h6>{title}</h6></CardTitle>
-                    <CardDescription><p>{shortDescription}</p></CardDescription>
+                    <CardDescription>
+                        <p>{shortDescription}</p>
+                    </CardDescription>
                 </CardContent>
                 <CardFooter>
                     <div className="flex flex-row justify-end gap-2 pt-2">

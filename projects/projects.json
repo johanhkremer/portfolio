@@ -2,6 +2,7 @@
     {
         "id": "1",
         "date": "2024-05-17",
+        "inProgress": false,
         "title": "Star Wars encyclopedia",
         "image": "/projects/starwars-encyclopedia-1-netlify-app-1024x768desktop.png",
         "shortDescription": "Learn more about a galaxy far, far away.",
@@ -11,6 +12,7 @@
     {
         "id": "2",
         "date": "2024-06-10",
+        "inProgress": false,
         "title": "My movie database",
         "image": "/projects/my-movie-database-1-netlify-app-1024x768desktop.png",
         "shortDescription": "Grab your popcorn!",
@@ -20,6 +22,7 @@
     {
         "id": "3",
         "date": "2024-06-19",
+        "inProgress": false,
         "title": "React Memory Game",
         "image": "/projects/react-memory-fantasy-netlify-app-1024x768desktop.png",
         "shortDescription": "Match fast before you forget!",
@@ -29,6 +32,7 @@
     {
         "id": "4",
         "date": "2025-01-27",
+        "inProgress": false,
         "title": "Portfolio Website",
         "image": "/projects/portfolio.png",
         "shortDescription": "Behind the scenes of my digital portfolio!",
@@ -38,6 +42,7 @@
     {
         "id": "5",
         "date": "2025-01-07",
+        "inProgress": false,
         "title": "Kitchen Quick",
         "image": "/projects/kitchen-quick/kitchen-quick-7.png",
         "shortDescription": "What’s for dinner? Let’s find out!",
@@ -47,6 +52,7 @@
     {
         "id": "6",
         "date": "2023-12-01",
+        "inProgress": false,
         "title": "Flag Quiz",
         "image": "/projects/flag-quiz.png",
         "shortDescription": "My first ever JavaScript project.",

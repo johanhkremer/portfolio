@@ -14,7 +14,10 @@ export default function Footer() {
                 <TooltipProvider>
                     <Tooltip>
                         <TooltipTrigger>
-                            <Link href='https://github.com/johanhkremer'>
+                            <Link
+                                href='https://github.com/johanhkremer'
+                                target="_blank"
+                            >
                                 <Image
                                     src='/logos/github-mark-white.svg'
                                     alt='logo'
@@ -33,7 +36,10 @@ export default function Footer() {
                 <TooltipProvider>
                     <Tooltip>
                         <TooltipTrigger>
-                            <Link href='https://www.linkedin.com/in/johan-kremer/'>
+                            <Link
+                                href='https://www.linkedin.com/in/johan-kremer/'
+                                target="_blank"
+                            >
                                 <Image
                                     src='/logos/inBug-White.png'
                                     alt='logo'

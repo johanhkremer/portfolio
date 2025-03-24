@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import { ArrowLeft } from "lucide-react"
 
-export default async function ProjectPage() {
+export default async function KitchenQuickPage() {
 
     const tags: string[] = ["Next.js", "React", "Typescript", "Git", "Github", "Tailwind", "HTML", "Figma", "Shadcn", "Auth.js"]
 
@@ -20,9 +20,10 @@ export default async function ProjectPage() {
             <div className='py-8'>
                 <Separator />
             </div>
-            <div className="flex flex-col justify-between pb-14 gap-14">
-                <div className="flex flex-col gap-6 ">
-                    <ul className="flex flex-row gap-4">
+            <div className="flex flex-col gap-14 items-center w-full px-4 pb-6">
+                <div className="flex flex-col gap-8 w-full max-w-[600px]">
+                    <h5>Tools used</h5>
+                    <ul className="flex flex-row flex-wrap gap-4">
                         {tags.map(tag => (
                             <li key={tag}><Badge>{tag}</Badge></li>
                         ))}
@@ -38,7 +39,7 @@ export default async function ProjectPage() {
                             alt="Design system documentation"
                             width={600}
                             height={500}
-                            className="outline outline-[0.5px] outline-text-100"
+                            className="outline outline-[0.5px] outline-text-100 rounded-md"
                         />
                         <figcaption className="font-light text-text-100">Style guide documentation in Figma</figcaption>
                     </figure>
@@ -53,7 +54,7 @@ export default async function ProjectPage() {
                             alt="User journey mapping"
                             width={600}
                             height={500}
-                            className="outline outline-[0.5px] outline-text-100"
+                            className="outline outline-[0.5px] outline-text-100 rounded-md"
                         />
                         <figcaption className="font-light text-text-100">User flow diagram in Figma</figcaption>
                     </figure>
@@ -68,7 +69,7 @@ export default async function ProjectPage() {
                             alt="Layout prototypes"
                             width={600}
                             height={500}
-                            className="outline outline-[0.5px] outline-text-100"
+                            className="outline outline-[0.5px] outline-text-100 rounded-md"
                         />
                         <figcaption className="font-light text-text-100">Responsive wireframe concepts</figcaption>
                     </figure>
@@ -83,7 +84,7 @@ export default async function ProjectPage() {
                             alt="Final interface design"
                             width={600}
                             height={500}
-                            className="outline outline-[0.5px] outline-text-100"
+                            className="outline outline-[0.5px] outline-text-100 rounded-md"
                         />
                         <figcaption className="font-light text-text-100">High-fidelity interface prototype</figcaption>
                     </figure>
@@ -98,38 +99,39 @@ export default async function ProjectPage() {
                             alt="Application interface overview"
                             width={600}
                             height={500}
-                            className="outline outline-[0.5px] outline-text-100"
+                            className="outline outline-[0.5px] outline-text-100 rounded-md"
                         />
                         <Image
                             src="/projects/kitchen-quick/kitchen-quick-9.png"
                             alt="Mobile view demonstration"
                             width={600}
                             height={500}
-                            className="outline outline-[0.5px] outline-text-100"
+                            className="outline outline-[0.5px] outline-text-100 rounded-md"
                         />
                         <Image
                             src="/projects/kitchen-quick/kitchen-quick-10.png"
                             alt="User interaction flow"
                             width={600}
                             height={500}
-                            className="outline outline-[0.5px] outline-text-100"
+                            className="outline outline-[0.5px] outline-text-100 rounded-md"
                         />
                         <Image
                             src="/projects/kitchen-quick/kitchen-quick-11.png"
                             alt="Data visualization components"
                             width={600}
                             height={500}
-                            className="outline outline-[0.5px] outline-text-100"
+                            className="outline outline-[0.5px] outline-text-100 rounded-md"
                         />
                         <figcaption className="font-light text-text-100">Key application interfaces</figcaption>
                     </figure>
                 </div>
+            </div>
+            <div className="pb-6">
                 <Link href={"/#projects"} className="flex flex-row gap-2 hover:underline">
                     <ArrowLeft className="w-6 h-6" />
                     <p>Back</p>
                 </Link>
             </div>
-
         </>
     )
 }
