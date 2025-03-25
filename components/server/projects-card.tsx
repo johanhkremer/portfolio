@@ -31,7 +31,7 @@ export default function ProjectsCard({
         <Card>
             <Image
                 src={image}
-                alt="project image"
+                alt={`Image of project ${title}`}
                 placeholder="blur"
                 blurDataURL={image}
                 width={240}
