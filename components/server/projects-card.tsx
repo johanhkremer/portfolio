@@ -41,7 +41,7 @@ export default function ProjectsCard({
             />
             <div className="flex flex-col py-4 px-4 gap-4 h-full">
                 <CardContent className="flex flex-col gap-2 flex-1">
-                    <CardTitle><h6>{title}</h6></CardTitle>
+                    <CardTitle><h4 className="h6">{title}</h4></CardTitle>
                     <CardDescription>
                         <p>{shortDescription}</p>
                     </CardDescription>
