@@ -6,13 +6,13 @@ export default function HeroSection() {
         <section id="hero" className="flex flex-col justify-between h-[calc(100vh-6rem)]">
             <div className="flex flex-col space-y-4 pl-0 pt-14 md:pl-36 md:pt-24">
                 <h1>Johan Kremer</h1>
-                <h4>Front End Developer</h4>
+                <h2 className='h4'>Front End Developer</h2>
                 <Link href="#projects">
-                    <h5 className="text-secondary-200 hover:underline">Projects</h5>
+                    <h3 className="h5 text-secondary-200 hover:underline">Projects</h3>
                 </Link>
             </div>
-            <div className="flex justify-center">
-                <Link href="#projects">
+            <div className="flex justify-center pb-10 md:pb-0">
+                <Link href="#projects" aria-label='Scroll down to projects'>
                     <ArrowDown
                         size={48}
                         className="animate-bounce text-primary-200"

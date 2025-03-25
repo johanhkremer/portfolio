@@ -43,7 +43,7 @@ export default function AboutSection() {
                             I am particularly interested in exploring new technologies and methodologies in web development and strive to build efficient and sustainable solutions. My GitHub features projects that showcase my ability to work with both front-end and back-end technologies, as well as my commitment to continuous learning and growth in the field.
                         </p>
                     </div>
-                    <h5 className='py-4'>Skills</h5>
+                    <h4 className='h5 py-4'>Skills</h4>
                     <ul className="flex flex-wrap gap-4">
                         {skills.map((skill) => (
                             <li key={skill}>

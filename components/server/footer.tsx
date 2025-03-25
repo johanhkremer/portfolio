@@ -18,6 +18,7 @@ export default function Footer() {
                         <TooltipTrigger>
                             <Link
                                 href='https://github.com/johanhkremer'
+                                aria-label="Visit my Github profile"
                                 target="_blank"
                             >
                                 <Image
@@ -41,6 +42,7 @@ export default function Footer() {
                         <TooltipTrigger>
                             <Link
                                 href='https://www.linkedin.com/in/johan-kremer/'
+                                aria-label="Visit my LinkedIn profile"
                                 target="_blank"
                             >
                                 <Image
