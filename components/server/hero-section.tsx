@@ -11,7 +11,7 @@ export default function HeroSection() {
                     <h3 className="h5 text-secondary-200 hover:underline">Projects</h3>
                 </Link>
             </div>
-            <div className="flex justify-center pb-10 md:pb-0">
+            <div className="flex justify-center pb-20 md:pb-0">
                 <Link href="#projects" aria-label='Scroll down to projects'>
                     <ArrowDown
                         size={48}
