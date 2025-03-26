@@ -58,5 +58,15 @@
         "shortDescription": "My first ever JavaScript project.",
         "githublink": "https://github.com/johanhkremer/country-quiz",
         "link": "https://flagquizzz.netlify.app/"
+    },
+    {
+        "id": "7",
+        "date": "2024-11-19",
+        "inProgress": true,
+        "title": "ChromaPetit",
+        "image": "/projects/chroma-petit.png",
+        "shortDescription": "Micro masterpieces: unleash your creativity on a tiny canvas.",
+        "githublink": "",
+        "link": "/projects/chroma-petit"
     }
 ]

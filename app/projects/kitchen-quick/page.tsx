@@ -6,7 +6,7 @@ import { ArrowLeft } from "lucide-react"
 
 export default async function KitchenQuickPage() {
 
-    const tags: string[] = ["Next.js", "React", "Typescript", "Git", "Github", "Tailwind", "HTML", "Figma", "Shadcn", "Auth.js"]
+    const tags: string[] = ["Next.js", "React", "Typescript", "Git", "Github", "Tailwind", "HTML", "Figma", "Shadcn", "Auth.js", "Scrum", "Agile"]
 
     return (
         <>
