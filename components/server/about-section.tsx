@@ -34,13 +34,13 @@ export default function AboutSection() {
                 <div className='pb-8 md:pr-8'>
                     <div className="flex flex-col gap-4">
                         <p>
-                            I am a junior front-end developer with a background in teaching. My focus is on developing user-friendly web applications using modern technologies such as TypeScript, React, and Next.js. I also have experience working with back-end solutions, including authentication, database management, and API integrations.
+                            Ever since I can remember, I have loved technology and IT. In high school, I was passionate about two subjects: film studies and web development. After receiving my first paycheck upon graduating, I bought a desktop computer and assembled it myself. Many people around me wondered if I should pursue a career in IT, but when I heard terms like “systems scientist,” I imagined math geniuses winning Nobel Prizes, so I hesitated to follow my passion. Instead, I chose to become a teacher and study humanities and social sciences. I spent 10 years teaching in both high schools and adult education, yet I found myself constantly drawn to IT and computers. During my last two years, I even started a 3D printing course at my school. Ultimately, I realized that teaching was not enough—I wanted to fully embrace my passion for computers and IT.
                         </p>
                         <p>
-                            In addition to coding, I have a strong interest in UX design and enjoy working with tools like Figma to create user-centered interfaces. I combine my technical skills with an understanding of design principles to deliver functional and intuitive solutions.
+                            Today, I am a junior front-end developer, and I love my new career path. My focus is on developing user-friendly web applications using technologies such as TypeScript, React, and Next.js. I also have experience with back-end solutions, including authentication, database management, and API integrations. Beyond programming, I have a keen interest in UX design and enjoy using tools like Figma to create user-centered interfaces. I combine my technical skills with a understanding of design principles to deliver functional and intuitive solutions.
                         </p>
                         <p>
-                            I am particularly interested in exploring new technologies and methodologies in web development and strive to build efficient and sustainable solutions. My GitHub features projects that showcase my ability to work with both front-end and back-end technologies, as well as my commitment to continuous learning and growth in the field.
+                            What I enjoy most about being a developer is the continuous personal growth and the excitement of discovering new ways to tackle challenges. I love exploring new frameworks, libraries, and languages, and I find it rewarding to work collaboratively with others to solve problems and drive projects forward.
                         </p>
                     </div>
                     <h4 className='h5 py-4'>Skills</h4>

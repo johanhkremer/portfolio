@@ -21,6 +21,7 @@ interface ProjectsCardProps {
 }
 
 export default function ProjectsCard({
+    inProgress,
     title,
     image,
     link,
@@ -28,7 +29,12 @@ export default function ProjectsCard({
     shortDescription,
 }: ProjectsCardProps) {
     return (
-        <Card>
+        <Card className="relative overflow-visible">
+            {inProgress && (
+                <div className="absolute top-8 right-12 translate-x-1/2 -translate-y-1/2 bg-background-100 border border-secondary-200 text-secondary-200 rounded-md py-1 px-4 whitespace-nowrap">
+                    <p>In progress</p>
+                </div>
+            )}
             <Image
                 src={image}
                 alt={`Image of project ${title}`}
@@ -57,7 +63,7 @@ export default function ProjectsCard({
                                 </Button>
                             </Link>
                             : <Link href={link}>
-                                <Button variant={"secondary"} className="w-auto">
+                                <Button variant={"default"} className="w-auto">
                                     Visit project page
                                 </Button>
                             </Link>
