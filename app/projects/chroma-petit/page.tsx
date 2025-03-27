@@ -31,7 +31,7 @@ export default async function ChromaPetitPage() {
                     <div>
                         <h5>Description</h5>
                         <Link
-                            href="https://github.com/johanhkremer/portfolio"
+                            href="https://github.com/johanhkremer/chromapetit"
                             target="_blank"
                         >
                             <p className="text-secondary-200 hover:underline">Project on Github</p>

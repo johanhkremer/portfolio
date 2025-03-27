@@ -25,7 +25,7 @@ export default function AboutSection() {
     ]
 
     return (
-        <section id="about" className="min-h-screen px-2 py-8 md:p-8">
+        <section id="about" className="px-2 py-8">
             <h3>About</h3>
             <div className="py-8">
                 <Separator />
