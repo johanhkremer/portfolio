@@ -42,8 +42,7 @@ export default function ProjectsCard({
                 blurDataURL={image}
                 width={240}
                 height={140}
-                layout="responsive"
-                className="outline outline-[0.5px] outline-text-100"
+                className="outline outline-[0.5px] outline-text-100 w-full h-auto rounded-t-md"
             />
             <div className="flex flex-col py-4 px-4 gap-4 h-full">
                 <CardContent className="flex flex-col gap-2 flex-1">
