@@ -29,7 +29,7 @@ export default function ProjectsCard({
     shortDescription,
 }: ProjectsCardProps) {
     return (
-        <Card className="relative overflow-visible">
+        <Card className="relative overflow-visible border-[0.5px] border-text-100 rounded-md">
             {inProgress && (
                 <div className="absolute top-8 right-12 translate-x-1/2 -translate-y-1/2 bg-background-100 border border-secondary-200 text-secondary-200 rounded-md py-1 px-4 whitespace-nowrap">
                     <p>In progress</p>
@@ -42,7 +42,7 @@ export default function ProjectsCard({
                 blurDataURL={image}
                 width={240}
                 height={140}
-                className="outline outline-[0.5px] outline-text-100 w-full h-auto rounded-t-md"
+                className="w-full h-auto rounded-t-md"
             />
             <div className="flex flex-col py-4 px-4 gap-4 h-full">
                 <CardContent className="flex flex-col gap-2 flex-1">

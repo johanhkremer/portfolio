@@ -2,7 +2,7 @@ import React from 'react'
 import { Separator } from '../ui/separator'
 import { Badge } from '../ui/badge'
 import Image from 'next/image'
-import profilePicture from '@/public/profile-large.jpg'
+import profilePicture from '@/public/profile-paint.jpeg'
 
 export default function AboutSection() {
     const skills = [
