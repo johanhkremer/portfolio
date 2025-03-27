@@ -74,14 +74,19 @@ export default function Navbar() {
                 {['projects', 'about', 'contact'].map((section) => (
                     <li key={section}>
                         <Link
-                            href={isHomePage ? `#${section}` : `/#${section}`}
-                            onClick={(e) => smoothScroll(e, section)}
-                            scroll={false}
+                            href={`/#${section}`}
+                            {...(isHomePage
+                                ? {
+                                    onClick: (e) => smoothScroll(e, section),
+                                    scroll: false,
+                                }
+                                : {})}
                         >
                             <h6 className='hover:underline capitalize'>{section}</h6>
                         </Link>
                     </li>
                 ))}
+
             </ul>
             <div className='md:hidden'>
                 <HamburgerMenu />
