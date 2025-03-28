@@ -19,13 +19,15 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="flex flex-col min-h-screen">
-          <header className="px-4 sm:px-6 md-px-10">
+          <header className="px-4 sm:px-6 md-px-10 lg:px-24 xl:px-32">
             <Navbar />
           </header>
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <SocialSidebar />
           </div>
-          <main className="flex-grow px-4 sm:px-6 md:px-14 xl:max-w-7xl xl:mx-auto">
+          <main
+            className="flex-grow w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-40 [@media(min-width:1280px)]:px-40 [@media(min-width:1600px)]:px-96"
+          >
             {children}
           </main>
           <footer>
@@ -33,6 +35,7 @@ export default function RootLayout({
           </footer>
         </div>
         <Toaster />
+        {/* <WindowSize /> */}
       </body>
     </html>
   );

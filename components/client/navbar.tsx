@@ -70,7 +70,7 @@ export default function Navbar() {
                     <AvatarFallback>JK</AvatarFallback>
                 </Avatar>
             </Link>
-            <ul className='hidden md:flex flex-row items-center gap-8 text-primary-200'>
+            <ul className='hidden lg:flex flex-row items-center gap-8 text-primary-200'>
                 {['projects', 'about', 'contact'].map((section) => (
                     <li key={section}>
                         <Link
@@ -88,7 +88,7 @@ export default function Navbar() {
                 ))}
 
             </ul>
-            <div className='md:hidden'>
+            <div className='lg:hidden'>
                 <HamburgerMenu />
             </div>
         </nav>

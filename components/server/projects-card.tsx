@@ -40,8 +40,8 @@ export default function ProjectsCard({
                 alt={`Image of project ${title}`}
                 placeholder="blur"
                 blurDataURL={image}
-                width={240}
-                height={140}
+                width={960}
+                height={560}
                 className="w-full h-auto rounded-t-md"
             />
             <div className="flex flex-col py-4 px-4 gap-4 h-full">
