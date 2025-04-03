@@ -18,14 +18,14 @@ export default {
 			},
 			colors: {
 				primary: {
-					100: '#627E83',
-					200: '#2D545E',
+					100: '#7F9DA0',
+					200: '#2C545E',
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
-					100: '#BB5A68',
-					200: '#A4243B',
+					100: '#CFA6B5',
+					200: '#BA5B6B',
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},

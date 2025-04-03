@@ -57,12 +57,12 @@ export default function ProjectsCard({
                             ? <Link
                                 href={githublink}
                                 target="_blank">
-                                <Button variant={"default"} className="w-auto">
+                                <Button variant={"defaultLight"} className="w-auto">
                                     Visit Github
                                 </Button>
                             </Link>
                             : <Link href={link}>
-                                <Button variant={"default"} className="w-auto">
+                                <Button variant={"defaultLight"} className="w-auto">
                                     Visit project page
                                 </Button>
                             </Link>

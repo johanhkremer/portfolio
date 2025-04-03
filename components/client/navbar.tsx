@@ -2,9 +2,8 @@
 
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Link from 'next/link'
-import HamburgerMenu from '../server/hamburger-menu';
+import Image from 'next/image';
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -14,26 +13,21 @@ export default function Navbar() {
         e.preventDefault();
 
         if (isHomePage) {
-            // If the user is already on the homepage, scroll directly
             const target = document.getElementById(targetId);
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
                 window.history.pushState(null, '', `/#${targetId}`);
             }
         } else {
-            // If the user is not on the homepage, add the target to the URL and let
-            // useEffect handle the scrolling when we land on the homepage
             window.location.href = `/#${targetId}`;
         }
     };
 
     useEffect(() => {
-        // Check if there is a hash in the URL when the page loads
         const hash = window.location.hash.replace('#', '');
         if (hash && isHomePage) {
             const target = document.getElementById(hash);
             if (target) {
-                // Small timeout to ensure the DOM is fully loaded
                 setTimeout(() => {
                     target.scrollIntoView({ behavior: 'smooth' });
                 }, 100);
@@ -53,7 +47,7 @@ export default function Navbar() {
             threshold: 0.5,
         });
 
-        const sections = ['projects', 'about', 'contact', 'hero'];
+        const sections = ['hero', 'myWork', 'about', 'contact'];
         sections.forEach(id => {
             const element = document.getElementById(id);
             if (element) observer.observe(element);
@@ -63,18 +57,16 @@ export default function Navbar() {
     }, [isHomePage]);
 
     return (
-        <nav className='flex flex-row py-4 justify-between items-center'>
-            <Link href="/">
-                <Avatar>
-                    <AvatarImage src="/profile.png" />
-                    <AvatarFallback>JK</AvatarFallback>
-                </Avatar>
+        <nav className={`z-50 ${isHomePage ? 'absolute top-8 left-1/2 transform -translate-x-1/2' : 'relative mt-4 mx-auto'} 
+    flex flex-row justify-evenly items-center border border-text-100 rounded-full px-6 py-2 gap-24 bg-white/70 backdrop-blur-md shadow-sm`}>
+            <Link href="/" className='flex justify-center items-center rounded-full w-6 h-auto border border-text-100'>
+                <p>JK</p>
             </Link>
-            <ul className='hidden lg:flex flex-row items-center gap-8 text-primary-200'>
-                {['projects', 'about', 'contact'].map((section) => (
+            <ul className='flex flex-row items-center gap-8 text-text-200'>
+                {['myWork', 'about', 'contact'].map((section) => (
                     <li key={section}>
                         <Link
-                            href={`/#${section}`}
+                            href={`/ #${section}`}
                             {...(isHomePage
                                 ? {
                                     onClick: (e) => smoothScroll(e, section),
@@ -82,14 +74,31 @@ export default function Navbar() {
                                 }
                                 : {})}
                         >
-                            <h6 className='hover:underline capitalize'>{section}</h6>
+                            <p className='hover:underline capitalize'>{section}</p>
                         </Link>
                     </li>
                 ))}
 
             </ul>
-            <div className='lg:hidden'>
-                <HamburgerMenu />
+            <div className='flex flex-row justify-end items-center gap-4'>
+                <Link href="https://github.com/johanhkremer" target="_blank">
+                    <Image
+                        src="/logos/github-black.svg"
+                        alt='logo'
+                        width={40}
+                        height={40}
+                        className="w-6 h-6"
+                    />
+                </Link>
+                <Link href={"https://www.linkedin.com/in/johan-kremer/"} target="_blank">
+                    <Image
+                        src="/logos/linkedin-black.svg"
+                        alt='logo'
+                        width={40}
+                        height={40}
+                        className="w-6 h-6"
+                    />
+                </Link>
             </div>
         </nav>
     )
