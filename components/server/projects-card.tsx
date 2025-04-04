@@ -8,6 +8,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { Button } from "../ui/button";
+import { ArrowRight } from "lucide-react"
 
 interface ProjectsCardProps {
     id: string
@@ -31,7 +32,7 @@ export default function ProjectsCard({
     return (
         <Card className="relative overflow-visible border-[0.5px] border-text-100 rounded-md">
             {inProgress && (
-                <div className="absolute top-8 right-12 translate-x-1/2 -translate-y-1/2 bg-background-100 border border-secondary-200 text-secondary-200 rounded-md py-1 px-4 whitespace-nowrap">
+                <div className="absolute top-8 right-12 translate-x-1/2 -translate-y-1/2 bg-background-100 border border-secondary-100 text-secondary-100 rounded-md py-1 px-4 whitespace-nowrap">
                     <p>In progress</p>
                 </div>
             )}
@@ -52,26 +53,26 @@ export default function ProjectsCard({
                     </CardDescription>
                 </CardContent>
                 <CardFooter>
-                    <div className="flex flex-row justify-end gap-2 pt-2">
+                    <div className="flex flex-row gap-2">
                         {githublink
                             ? <Link
                                 href={githublink}
                                 target="_blank">
                                 <Button variant={"default"} className="w-auto">
-                                    Visit Github
+                                    Visit Github<ArrowRight />
                                 </Button>
                             </Link>
                             : <Link href={link}>
                                 <Button variant={"default"} className="w-auto">
-                                    Visit project page
+                                    Visit project<ArrowRight />
                                 </Button>
                             </Link>
                         }
                         {githublink && <Link
                             href={link}
                             target="_blank">
-                            <Button variant={"secondary"} className="w-auto">
-                                Visit Site
+                            <Button variant={"accent"} className="w-auto">
+                                Visit Site<ArrowRight />
                             </Button>
                         </Link>}
                     </div>

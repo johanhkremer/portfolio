@@ -10,8 +10,8 @@ export default async function PortfolioPage() {
 
     return (
         <>
-            <div className="pb-6">
-                <Link href={"/#projects"} className="flex flex-row gap-2 hover:underline">
+            <div className="py-6">
+                <Link href={"/#mywork"} className="flex flex-row gap-2 hover:underline">
                     <ArrowLeft className="w-6 h-6" />
                     <p>Back</p>
                 </Link>
@@ -22,12 +22,6 @@ export default async function PortfolioPage() {
             </div>
             <div className="flex flex-col gap-14 items-center w-full pb-6">
                 <div className="flex flex-col gap-8 w-full max-w-[600px]">
-                    <h5>Tools used</h5>
-                    <ul className="flex flex-row flex-wrap gap-4">
-                        {tags.map(tag => (
-                            <li key={tag}><Badge>{tag}</Badge></li>
-                        ))}
-                    </ul>
                     <div>
                         <h5>Description</h5>
                         <Link
@@ -82,10 +76,16 @@ export default async function PortfolioPage() {
                         <figcaption className="font-light text-text-100">Interactive prototype demonstration</figcaption>
                     </figure>
                     <p>The development phase leveraged Next.js and Tailwind CSS to implement the responsive design system. Version control through Git enabled systematic progress tracking and safe experimentation. Continuous deployment via Vercel provided real-time feedback during the build process.</p>
+                    <h5>Tools used</h5>
+                    <ul className="flex flex-row flex-wrap gap-4">
+                        {tags.map(tag => (
+                            <li key={tag}><Badge>{tag}</Badge></li>
+                        ))}
+                    </ul>
                 </div>
             </div>
             <div className="pb-6">
-                <Link href={"/#projects"} className="flex flex-row gap-2 hover:underline">
+                <Link href={"/#mywork"} className="flex flex-row gap-2 hover:underline">
                     <ArrowLeft className="w-6 h-6" />
                     <p>Back</p>
                 </Link>

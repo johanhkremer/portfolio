@@ -10,8 +10,8 @@ export default function ProjectSection() {
     );
 
     return (
-        <section id="projects" className='py-8'>
-            <h3>Projects</h3>
+        <section id="my Work" className='py-8'>
+            <h3>My Work</h3>
             <div className='py-8'>
                 <Separator />
             </div>
