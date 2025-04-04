@@ -36,15 +36,17 @@ export default function ProjectsCard({
                     <p>In progress</p>
                 </div>
             )}
-            <Image
-                src={image}
-                alt={`Image of project ${title}`}
-                placeholder="blur"
-                blurDataURL={image}
-                width={960}
-                height={560}
-                className="w-full h-auto rounded-t-md"
-            />
+            <Link href={link} target={githublink ? "_blank" : undefined}>
+                <Image
+                    src={image}
+                    alt={`Image of project ${title}`}
+                    placeholder="blur"
+                    blurDataURL={image}
+                    width={960}
+                    height={560}
+                    className="w-full h-auto rounded-t-md"
+                />
+            </Link>
             <div className="flex flex-col py-4 px-4 gap-4 h-full">
                 <CardContent className="flex flex-col gap-2 flex-1">
                     <CardTitle><h4 className="h6">{title}</h4></CardTitle>
@@ -54,11 +56,18 @@ export default function ProjectsCard({
                 </CardContent>
                 <CardFooter>
                     <div className="flex flex-row gap-2">
+                        {githublink && <Link
+                            href={link}
+                            target="_blank">
+                            <Button variant={"default"} className="w-auto">
+                                Visit Site<ArrowRight />
+                            </Button>
+                        </Link>}
                         {githublink
                             ? <Link
                                 href={githublink}
                                 target="_blank">
-                                <Button variant={"default"} className="w-auto">
+                                <Button variant={"accent"} className="w-auto">
                                     Visit Github<ArrowRight />
                                 </Button>
                             </Link>
@@ -68,13 +77,6 @@ export default function ProjectsCard({
                                 </Button>
                             </Link>
                         }
-                        {githublink && <Link
-                            href={link}
-                            target="_blank">
-                            <Button variant={"accent"} className="w-auto">
-                                Visit Site<ArrowRight />
-                            </Button>
-                        </Link>}
                     </div>
                 </CardFooter>
             </div>
