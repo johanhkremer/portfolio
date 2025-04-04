@@ -58,11 +58,13 @@ export default function Navbar() {
 
     return (
         <nav className={`z-50 ${isHomePage ? 'absolute top-8 left-1/2 transform -translate-x-1/2' : 'relative mt-4 mx-auto'} 
-    flex flex-row justify-evenly items-center border border-text-100 rounded-full px-6 py-2 gap-24 bg-white/70 backdrop-blur-md shadow-sm`}>
-            <Link href="/" className='flex justify-center items-center rounded-full w-6 h-auto border border-text-100'>
-                <p>JK</p>
-            </Link>
-            <ul className='flex flex-row items-center gap-8 text-text-200'>
+    flex flex-row items-center border border-text-100 rounded-full py-2 px-4 gap-6 md:gap-16 bg-white/70 backdrop-blur-md shadow-sm`}>
+            <div className='flex justify-center w-14'>
+                <Link href="/" className="flex justify-center items-center rounded-full w-4 h-4 md:h-6 md:w-6 border border-text-100">
+                    <span className="text-[0.5rem] md:text-xs leading-none">JK</span>
+                </Link>
+            </div>
+            <ul className='flex flex-row items-center gap-4 md:gap-6 lg:gap-8 text-text-200'>
                 {['myWork', 'about', 'contact'].map((section) => (
                     <li key={section}>
                         <Link
@@ -74,30 +76,32 @@ export default function Navbar() {
                                 }
                                 : {})}
                         >
-                            <p className='hover:underline capitalize'>{section}</p>
+                            <p className='hover:underline capitalize text-xs sm:text-base'>{section}</p>
                         </Link>
                     </li>
                 ))}
 
             </ul>
-            <div className='flex flex-row justify-end items-center gap-4'>
+            <div className='flex flex-row justify-end items-center gap-2'>
                 <Link href="https://github.com/johanhkremer" target="_blank">
-                    <Image
-                        src="/logos/github-black.svg"
-                        alt='logo'
-                        width={40}
-                        height={40}
-                        className="w-6 h-6"
-                    />
+                    <div className="relative w-4 h-4 sm:w-6 sm:h-6">
+                        <Image
+                            src="/logos/github-black.svg"
+                            alt="GitHub logo"
+                            fill
+                            className="object-contain"
+                        />
+                    </div>
                 </Link>
                 <Link href={"https://www.linkedin.com/in/johan-kremer/"} target="_blank">
-                    <Image
-                        src="/logos/linkedin-black.svg"
-                        alt='logo'
-                        width={40}
-                        height={40}
-                        className="w-6 h-6"
-                    />
+                    <div className="relative w-4 h-4 sm:w-6 sm:h-6">
+                        <Image
+                            src="/logos/linkedin-black.svg"
+                            alt="LinkedIn logo"
+                            fill
+                            className="object-contain"
+                        />
+                    </div>
                 </Link>
             </div>
         </nav>

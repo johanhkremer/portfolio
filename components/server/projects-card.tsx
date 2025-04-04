@@ -31,7 +31,7 @@ export default function ProjectsCard({
     return (
         <Card className="relative overflow-visible border-[0.5px] border-text-100 rounded-md">
             {inProgress && (
-                <div className="absolute top-8 right-12 translate-x-1/2 -translate-y-1/2 bg-background-100 border border-secondary-200 text-secondary-200 rounded-md py-1 px-4 whitespace-nowrap">
+                <div className="absolute top-8 right-12 translate-x-1/2 -translate-y-1/2 bg-background-100 border border-secondary-100 text-secondary-100 rounded-md py-1 px-4 whitespace-nowrap">
                     <p>In progress</p>
                 </div>
             )}
@@ -57,12 +57,12 @@ export default function ProjectsCard({
                             ? <Link
                                 href={githublink}
                                 target="_blank">
-                                <Button variant={"defaultLight"} className="w-auto">
+                                <Button variant={"default"} className="w-auto">
                                     Visit Github
                                 </Button>
                             </Link>
                             : <Link href={link}>
-                                <Button variant={"defaultLight"} className="w-auto">
+                                <Button variant={"default"} className="w-auto">
                                     Visit project page
                                 </Button>
                             </Link>
@@ -70,7 +70,7 @@ export default function ProjectsCard({
                         {githublink && <Link
                             href={link}
                             target="_blank">
-                            <Button variant={"secondary"} className="w-auto">
+                            <Button variant={"accent"} className="w-auto">
                                 Visit Site
                             </Button>
                         </Link>}

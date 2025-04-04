@@ -102,7 +102,7 @@ export default function ContactForm() {
                     )}
                 />
 
-                <Button type="submit" variant={"defaultLight"} className="w-full" disabled={isSubmitting}>
+                <Button type="submit" variant={"default"} className="w-full" disabled={isSubmitting}>
                     {isSubmitting ? (
                         <>
                             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
