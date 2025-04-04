@@ -11,7 +11,7 @@ export default async function PortfolioPage() {
     return (
         <>
             <div className="pb-6">
-                <Link href={"/#projects"} className="flex flex-row gap-2 hover:underline">
+                <Link href={"/#mywork"} className="flex flex-row gap-2 hover:underline">
                     <ArrowLeft className="w-6 h-6" />
                     <p>Back</p>
                 </Link>
@@ -85,7 +85,7 @@ export default async function PortfolioPage() {
                 </div>
             </div>
             <div className="pb-6">
-                <Link href={"/#projects"} className="flex flex-row gap-2 hover:underline">
+                <Link href={"/#mywork"} className="flex flex-row gap-2 hover:underline">
                     <ArrowLeft className="w-6 h-6" />
                     <p>Back</p>
                 </Link>

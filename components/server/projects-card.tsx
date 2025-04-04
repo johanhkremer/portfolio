@@ -8,6 +8,7 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { Button } from "../ui/button";
+import { ArrowRight } from "lucide-react"
 
 interface ProjectsCardProps {
     id: string
@@ -52,18 +53,18 @@ export default function ProjectsCard({
                     </CardDescription>
                 </CardContent>
                 <CardFooter>
-                    <div className="flex flex-row justify-end gap-2 pt-2">
+                    <div className="flex flex-row gap-2">
                         {githublink
                             ? <Link
                                 href={githublink}
                                 target="_blank">
                                 <Button variant={"default"} className="w-auto">
-                                    Visit Github
+                                    Visit Github<ArrowRight />
                                 </Button>
                             </Link>
                             : <Link href={link}>
                                 <Button variant={"default"} className="w-auto">
-                                    Visit project page
+                                    Visit project<ArrowRight />
                                 </Button>
                             </Link>
                         }
@@ -71,7 +72,7 @@ export default function ProjectsCard({
                             href={link}
                             target="_blank">
                             <Button variant={"accent"} className="w-auto">
-                                Visit Site
+                                Visit Site<ArrowRight />
                             </Button>
                         </Link>}
                     </div>
