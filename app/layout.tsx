@@ -3,7 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/client/navbar";
 import Footer from "@/components/server/footer";
 import { Toaster } from "@/components/ui/sonner";
-import HeroSection from "@/components/server/hero-section";
+import HeroSection from "@/components/client/hero-section";
 
 export const metadata: Metadata = {
   title: "Portfolio",

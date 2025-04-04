@@ -10,7 +10,7 @@ export default async function KitchenQuickPage() {
 
     return (
         <>
-            <div className="pb-6">
+            <div className="py-6">
                 <Link href={"/#mywork"} className="flex flex-row gap-2 hover:underline">
                     <ArrowLeft className="w-6 h-6" />
                     <p>Back</p>
@@ -22,12 +22,6 @@ export default async function KitchenQuickPage() {
             </div>
             <div className="flex flex-col gap-14 items-center w-full pb-6">
                 <div className="flex flex-col gap-8 w-full max-w-[600px]">
-                    <h5>Tools used</h5>
-                    <ul className="flex flex-row flex-wrap gap-4">
-                        {tags.map(tag => (
-                            <li key={tag}><Badge>{tag}</Badge></li>
-                        ))}
-                    </ul>
                     <h5>Description</h5>
                     <p>
                         This project was developed during my internship at Omegapoint in collaboration with another frontend developer and four Java backend developers. The backend team implemented the service using Spring Boot, WebFlux, and a SQL database. We initiated the process by creating a style guide to standardize design decisions and maintain visual consistency.
@@ -124,6 +118,12 @@ export default async function KitchenQuickPage() {
                         />
                         <figcaption className="font-light text-text-100">Key application interfaces</figcaption>
                     </figure>
+                    <h5>Tools used</h5>
+                    <ul className="flex flex-row flex-wrap gap-4">
+                        {tags.map(tag => (
+                            <li key={tag}><Badge>{tag}</Badge></li>
+                        ))}
+                    </ul>
                 </div>
             </div>
             <div className="pb-6">
