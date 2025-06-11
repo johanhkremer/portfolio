@@ -10,13 +10,9 @@ export default async function PortfolioPage() {
 
     return (
         <>
-            <div className="py-6">
-                <Link href={"/#mywork"} className="flex flex-row gap-2 hover:underline">
-                    <ArrowLeft className="w-6 h-6" />
-                    <p>Back</p>
-                </Link>
+            <div className="pt-20">
+                <h3>Portfolio</h3>
             </div>
-            <h3>Portfolio</h3>
             <div className='py-8'>
                 <Separator />
             </div>

@@ -57,14 +57,14 @@ export default function Navbar() {
     }, [isHomePage]);
 
     return (
-        <nav className={`z-50 ${isHomePage ? 'absolute top-8 left-1/2 transform -translate-x-1/2' : 'relative mt-4 mx-auto'} 
-    flex flex-row justify-between items-center border border-text-100 rounded-full py-2 px-4 gap-6 md:gap-16 bg-white/70 backdrop-blur-md shadow-sm`}>
-            <div className='min-w-[40px]'>
+        <nav className="z-50 fixed top-5 sm:top-10 left-1/2 -translate-x-1/2 w-max flex flex-row justify-between items-center border border-text-100 rounded-full py-2 px-4 gap-6 md:gap-16 bg-white/20 backdrop-blur-sm shadow-sm">
+
+            <div className='hidden sm:inline min-w-[40px]'>
                 <Link href="/" className="flex justify-center items-center rounded-full w-6 h-6 border border-text-100">
                     <span className="text-[0.5rem] md:text-xs leading-none">JK</span>
                 </Link>
             </div>
-            <ul className='flex flex-row gap-4 md:gap-6 lg:gap-8 xl:gap-10 flex-grow text-center text-text-200'>
+            <ul className='flex flex-row gap-4 md:gap-6 lg:gap-8 xl:gap-10 text-center text-text-200'>
                 {['my Work', 'about', 'contact'].map((section) => (
                     <li key={section}>
                         <Link

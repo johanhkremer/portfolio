@@ -10,6 +10,9 @@ export default {
 	],
 	theme: {
 		extend: {
+			screens: {
+				'3xl': '1700px',
+			},
 			fontFamily: {
 				poppins: [
 					'Poppins',
