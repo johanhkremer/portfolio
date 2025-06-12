@@ -14,15 +14,13 @@ export default function AboutSection() {
             <div className="flex flex-col items-center lg:flex-row lg:items-start lg:gap-20">
                 <div className='pb-8 pr-4'>
                     <div className="flex flex-col gap-4">
-                        <p>
-                            I&apos;ve loved technology and IT for as long as I can remember. In high school, I was passionate about film studies and web development, and after graduation, I built my first desktop computer. Initially intimidated by the idea of an IT career, I chose teaching humanities and social sciences instead. After ten years in education, including starting a 3D printing course, I realized teaching wasn&apos;t enough—I needed to follow my passion.
-                        </p>
-                        <p>
-                            Today, I&apos;m a junior front-end developer, creating user-friendly web applications with TypeScript, React, and Next.js. I also have backend experience with authentication, databases, and APIs, and a strong interest in UX design using Figma.
-                        </p>
-                        <p>
-                            What I enjoy most is continuous learning, discovering new technologies, and collaborating with others to solve challenges.
-                        </p>
+                        <p>I&rsquo;m a junior front-end developer based in Malmö, Sweden. I have a background in education and a lifelong passion for technology. I build user-friendly web applications using TypeScript, React, and Next.js, and I also work with authentication, APIs, and databases using tools like Prisma and PostgreSQL.</p>
+
+                        <p>I have a strong interest in UX design and often use Figma to create clear and functional interfaces, from wireframes to finished components.</p>
+
+                        <p>Before becoming a developer, I worked for over ten years as a teacher, developing courses and helping students grow. I introduced 3D printing into the classroom, and those experiences have shaped how I collaborate, communicate, and approach problem-solving with structure and clarity.</p>
+
+                        <p>I&rsquo;m driven by curiosity, continuous learning, and working with others to find smart and meaningful solutions. Whether it&rsquo;s writing clean code, designing user flows, or improving accessibility, I enjoy making things that work and make sense.</p>
                     </div>
                 </div>
                 <div className='relative mt-12 pb-8 md:pb-0 min-w-60'>
