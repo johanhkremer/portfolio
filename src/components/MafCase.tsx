@@ -14,7 +14,7 @@ export function MafCase() {
       />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-8">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-start lg:gap-y-0">
           <div>
             <SectionHeading label={maf.label} title={maf.title} />
             <Reveal delay={0.1}>
@@ -23,7 +23,10 @@ export function MafCase() {
               </p>
             </Reveal>
           </div>
-          <Reveal delay={0.1}>
+          <Reveal
+            delay={0.1}
+            className="lg:col-start-2 lg:row-span-2 lg:row-start-1"
+          >
             <p className="text-lead">{maf.summary}</p>
             <p className="mt-4 text-muted">{maf.role}</p>
             <ul className="mt-6 flex flex-wrap gap-2">
@@ -36,11 +39,16 @@ export function MafCase() {
                 </li>
               ))}
             </ul>
+          </Reveal>
+          <Reveal
+            delay={0.15}
+            className="lg:col-start-1 lg:row-start-2 lg:mt-10"
+          >
             <a
               href={maf.url}
               target="_blank"
               rel="noreferrer"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-cream px-7 py-3 text-lg font-semibold text-night transition hover:brightness-110"
+              className="inline-flex items-center gap-2 rounded-full bg-cream px-7 py-3 text-lg font-semibold text-night transition hover:brightness-110"
             >
               Besök m-a-f.org <span aria-hidden>↗</span>
             </a>
