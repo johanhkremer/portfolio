@@ -54,7 +54,7 @@ export const maf = {
       text: 'Ansökningsflöde och formulär som skickas server-side, med mottagare som styrs från CMS:et.',
     },
     {
-      title: 'Grafisk profil och tillgänglighet',
+      title: 'Profil och tillgänglighet',
       text: 'Typografi och hierarki enligt föreningens grafiska manual, responsiv layout och fokus på tillgänglighet.',
     },
   ],

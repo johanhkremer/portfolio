@@ -26,6 +26,16 @@ export function MafCase() {
           <Reveal delay={0.1}>
             <p className="text-lead">{maf.summary}</p>
             <p className="mt-4 text-muted">{maf.role}</p>
+            <ul className="mt-6 flex flex-wrap gap-2">
+              {maf.facts.map((f) => (
+                <li
+                  key={f.label}
+                  className="rounded-full bg-card px-4 py-1.5 text-sm font-medium text-haze"
+                >
+                  {f.value}
+                </li>
+              ))}
+            </ul>
             <a
               href={maf.url}
               target="_blank"
@@ -45,37 +55,26 @@ export function MafCase() {
               width={1440}
               height={470}
               loading="lazy"
-              className="block h-auto min-h-56 w-full object-cover"
+              className="block h-auto min-h-56 w-full object-cover grayscale brightness-[1.9] contrast-110"
             />
             <div
               aria-hidden
-              className="absolute inset-0 bg-[linear-gradient(180deg,transparent_40%,var(--color-navy))]"
+              className="absolute inset-0 bg-[linear-gradient(160deg,var(--color-coral),var(--color-magenta)_55%,var(--color-violet))] mix-blend-multiply"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-[linear-gradient(180deg,transparent_45%,var(--color-navy))]"
             />
           </div>
         </Reveal>
 
-        <dl className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-4">
-          {maf.facts.map((f, i) => (
-            <Reveal
-              key={f.label}
-              delay={i * 0.08}
-              className="rounded-xl bg-card p-6"
-            >
-              <dt className="text-sm font-medium text-muted">{f.label}</dt>
-              <dd className="mt-2 text-lg font-semibold text-haze">
-                {f.value}
-              </dd>
-            </Reveal>
-          ))}
-        </dl>
-
-        <div className="mt-16 grid gap-10 md:grid-cols-3">
+        <div className="mt-20 grid gap-10 md:grid-cols-3">
           {maf.highlights.map((h, i) => (
             <Reveal key={h.title} delay={i * 0.1}>
               <GradientText as="span" className="font-display text-4xl">
                 0{i + 1}
               </GradientText>
-              <h3 className="mt-3 font-display text-2xl text-haze sm:text-3xl md:min-h-[2lh]">
+              <h3 className="mt-3 font-display text-2xl text-haze">
                 {h.title}
               </h3>
               <p className="mt-2 text-muted">{h.text}</p>
