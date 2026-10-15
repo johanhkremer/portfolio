@@ -1,6 +1,7 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { MotionConfig } from 'motion/react'
 
+import { NotFound } from '../components/NotFound'
 import { site } from '../content'
 import appCss from '../styles.css?url'
 
@@ -33,6 +34,7 @@ export const Route = createRootRoute({
     ],
   }),
   shellComponent: RootDocument,
+  notFoundComponent: NotFound,
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {

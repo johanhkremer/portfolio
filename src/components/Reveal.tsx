@@ -40,7 +40,7 @@ export function GradientText({
   children,
   className = '',
 }: {
-  as?: 'h2' | 'span' | 'p'
+  as?: 'h1' | 'h2' | 'span' | 'p'
   tone?: Tone
   children: React.ReactNode
   className?: string
