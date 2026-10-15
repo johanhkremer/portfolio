@@ -42,7 +42,6 @@ export const maf = {
     { label: 'Ramverk', value: 'Next.js (App Router)' },
     { label: 'CMS', value: 'Sanity Studio' },
     { label: 'Data', value: 'Drizzle + Neon Postgres' },
-    { label: 'Drift', value: 'Vercel, preview per PR' },
   ],
   highlights: [
     {
@@ -50,8 +49,8 @@ export const maf = {
       text: 'Sanity Studio på /studio och en egen redaktionsmanual, så att föreningen kan uppdatera sajten utan en utvecklare.',
     },
     {
-      title: 'Medlemskap och formulär',
-      text: 'Ansökningsflöde och formulär som skickas server-side, med mottagare som styrs från CMS:et.',
+      title: 'Boka via formulär',
+      text: 'Besökare bokar föreställningar och kurser direkt via formulär. Anmälan skickas server-side, och mottagaren styrs från CMS:et.',
     },
     {
       title: 'Profil och tillgänglighet',
