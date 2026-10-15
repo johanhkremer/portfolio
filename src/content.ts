@@ -9,7 +9,17 @@ export const site = {
   github: 'https://github.com/johanhkremer',
   linkedin: 'https://www.linkedin.com/in/johan-kremer',
   description:
-    'Johan Kremer – webbutvecklare och YH-lärare i Malmö. Bygger tillgängliga webbplatser med React och TypeScript.',
+    'Johan Kremer – webbutvecklare och YH-lärare i Malmö. Bygger tillgängliga webbplatser med React och TypeScript och är van vid att arbeta med AI.',
+}
+
+export const credits = {
+  heroImage: {
+    text: 'Foto: Maria Eklind, Sunset over the rooftops',
+    license: 'CC BY-SA 2.0',
+    licenseUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    sourceUrl:
+      'https://commons.wikimedia.org/wiki/File:Sunset_over_the_rooftops.jpg',
+  },
 }
 
 export const hero = {
@@ -52,27 +62,26 @@ export const teaching = {
   label: 'Undervisning',
   title: 'Lärare på YH',
   lead: 'Jag undervisar i webbutveckling på yrkeshögskolan. Efter över tio år som lärare vet jag att det bästa sättet att förstå något är att förklara det för någon annan.',
-  // TODO: byt till dina faktiska kurser och skola
   courses: [
     {
-      tag: 'Kurs',
+      tag: 'Webbgrunder',
+      title: 'HTML & CSS',
+      text: 'Semantisk HTML, responsiv layout och modern CSS, från första sidan till en skalbar och tillgänglig webbplats.',
+    },
+    {
+      tag: 'Programmering',
       title: 'JavaScript',
-      text: 'Grunderna i språket, DOM och asynkron kod. Från första variabeln till en fungerande app.',
+      text: 'Språkets grunder, DOM-manipulation och felsökning, från första variabeln till interaktiva webbsidor med formulär och validering.',
     },
     {
-      tag: 'Kurs',
-      title: 'React & TypeScript',
-      text: 'Komponenter, state och typer. Hur man bygger gränssnitt som går att underhålla.',
+      tag: 'Samarbete',
+      title: 'Versionshantering',
+      text: 'Git och GitHub: commits, branches och pull requests, så att man kan samarbeta i kod utan att tappa kontrollen över versionerna.',
     },
     {
-      tag: 'Kurs',
-      title: 'Backend & API:er',
-      text: 'Node, databaser och autentisering. Hur frontend och backend pratar med varandra.',
-    },
-    {
-      tag: 'Handledning',
-      title: 'LIA & examensarbete',
-      text: 'Stöd till studenter under praktik och slutprojekt, från idé till färdig produkt.',
+      tag: 'Frontend',
+      title: 'React & Next.js',
+      text: 'Komponenter, props, routing och formulär med React och Vite, samt Next.js App Router. Slutar i en egen app.',
     },
   ],
 }
@@ -83,6 +92,7 @@ export const about = {
   paragraphs: [
     'Jag var lärare i över tio år. Jag utvecklade kurser och tog in 3D-utskrifter i klassrummet långt innan det var självklart. Nyfikenheten på teknik tog till slut över, och jag utbildade mig till frontendutvecklare.',
     'I dag kombinerar jag båda: jag bygger webbplatser och undervisar blivande utvecklare. Erfarenheten från klassrummet märks i hur jag samarbetar, kommunicerar och löser problem.',
+    'Jag är också van vid att arbeta med AI-verktyg som Claude och ChatGPT, både i utvecklingen och i undervisningen.',
   ],
   skills: [
     'TypeScript',
@@ -96,6 +106,8 @@ export const about = {
     'Sanity',
     'Figma',
     'Tillgänglighet',
+    'Claude',
+    'ChatGPT',
   ],
 }
 

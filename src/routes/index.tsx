@@ -6,7 +6,7 @@ import { Hero } from '../components/Hero'
 import { MafCase } from '../components/MafCase'
 import { Nav } from '../components/Nav'
 import { Teaching } from '../components/Teaching'
-import { site } from '../content'
+import { credits, site } from '../content'
 
 export const Route = createFileRoute('/')({ component: Home })
 
@@ -26,7 +26,26 @@ function Home() {
           <p>
             © {new Date().getFullYear()} {site.name}
           </p>
-          <p>Byggd med TanStack Start</p>
+          <p>
+            Byggd med TanStack Start ·{' '}
+            <a
+              href={credits.heroImage.sourceUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 hover:text-haze"
+            >
+              {credits.heroImage.text}
+            </a>
+            ,{' '}
+            <a
+              href={credits.heroImage.licenseUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 hover:text-haze"
+            >
+              {credits.heroImage.license}
+            </a>
+          </p>
         </div>
       </footer>
     </>
