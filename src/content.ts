@@ -2,6 +2,8 @@
 // Rader markerade med TODO är platshållare som behöver fyllas i.
 
 export const site = {
+  // TODO: byt till din egen domän om du skaffar en (påverkar og:url, canonical och sitemap)
+  url: 'https://portfolio-johan-kremer.vercel.app',
   name: 'Johan Kremer',
   role: 'Webbutvecklare & YH-lärare',
   location: 'Malmö',

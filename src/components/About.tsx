@@ -9,7 +9,9 @@ export function About() {
           {/* Duotone: bilden i gråskala med gradient i sidans palett (aprikos, blush, grape) ovanpå */}
           <div className="relative mx-auto aspect-[4/5] max-w-md overflow-hidden rounded-2xl">
             <img
-              src="/profile-large.jpg"
+              src="/profile.webp"
+              width={900}
+              height={1200}
               alt="Johan Kremer"
               className="h-full w-full object-cover grayscale contrast-125"
               loading="lazy"
