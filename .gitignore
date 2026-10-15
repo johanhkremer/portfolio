@@ -13,3 +13,6 @@ __unconfig*
 todos.json
 .env*
 !.env.example
+
+test-results
+playwright-report
