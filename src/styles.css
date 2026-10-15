@@ -1,0 +1,141 @@
+@import 'tailwindcss';
+@import '@fontsource/anton/latin-400.css';
+@import '@fontsource-variable/outfit';
+
+/*
+ * Dov aubergine-lila bakgrund med pastellgradient från gult via persika till rosa.
+ * Färgerna är tokens så att de kan användas som Tailwind-klasser
+ * (bg-night, text-magenta, from-coral osv.).
+ */
+@theme {
+  --color-night: #281c33;
+  --color-navy: #22192e;
+  --color-cream: #ffd4a8;
+  --color-rose: #ffc1cf;
+  --color-card: #3f284b;
+  --color-dusk: #321f3f;
+  --color-plum: #4e3159;
+  --color-magenta: #f4a298;
+  --color-coral: #ffd4a8;
+  --color-amber: #fcfa97;
+  --color-violet: #78487a;
+  --color-teal: #ffd4a8;
+  --color-haze: #fbf4ee;
+  --color-muted: #bba6c0;
+
+  --font-display: 'Outfit Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-label: 'Anton', 'Impact', sans-serif;
+  --font-sans: 'Outfit Variable', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-night font-sans text-haze antialiased;
+  }
+
+  ::selection {
+    @apply bg-magenta text-night;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-teal;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  text-wrap: balance;
+}
+
+/*
+ * Rubrikgradient: en enda skala ur paletten, gult via aprikos och rosa till blush.
+ * Bilden är dubbelt så bred som texten, så bara halva skalan syns åt gången.
+ * Positionen (0-100 %) styrs av GradientText: gula rubriker 0 till 70 %,
+ * rosa rubriker 30 till 100 %.
+ */
+@utility text-sunset {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-amber) 0%,
+    var(--color-coral) 33%,
+    var(--color-rose) 66%,
+    var(--color-magenta) 100%
+  );
+  background-size: 200% 100%;
+  background-position-x: 0%;
+  background-clip: text;
+  color: transparent;
+  /* Plats för nedåtsvansar (g, y, j) som annars klipps av raden */
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
+}
+
+/*
+ * Intoning av hero-innehållet. Ren CSS så att texten syns direkt i den förrenderade
+ * HTML:en (och räknas som LCP) i stället för att vänta på att JavaScript hydrerar.
+ */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--rise-y, 20px));
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@utility animate-rise {
+  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--delay, 0s);
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-name: fade;
+  }
+}
+
+/* Ingress under rubriker */
+@utility text-lead {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: color-mix(in oklab, var(--color-haze) 90%, transparent);
+
+  @media (min-width: 40rem) {
+    font-size: 1.25rem;
+  }
+}
+
+/* Liten etikett över rubriker: kondenserad versal. Ingen letter-spacing (Ä/Ö). */
+@utility font-label {
+  font-family: var(--font-label);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+/* Filmkorn över hela sidan */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
