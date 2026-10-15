@@ -1,0 +1,92 @@
+@import 'tailwindcss';
+@import '@fontsource/anton/latin-400.css';
+@import '@fontsource-variable/inter-tight';
+
+/*
+ * Neonsolnedgång: mörk natthimmel, magenta, korall, bärnsten och turkos.
+ * Färgerna är tokens så att de kan användas som Tailwind-klasser
+ * (bg-night, text-magenta, from-coral osv.).
+ */
+@theme {
+  --color-night: #0b0614;
+  --color-dusk: #1a0b2e;
+  --color-plum: #2d1147;
+  --color-magenta: #ff3d9a;
+  --color-coral: #ff7a59;
+  --color-amber: #ffbe5c;
+  --color-violet: #8b5cf6;
+  --color-teal: #2de2d0;
+  --color-haze: #f4e9ff;
+  --color-muted: #b9a7cf;
+
+  --font-display: 'Anton', 'Impact', sans-serif;
+  --font-sans: 'Inter Tight Variable', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-night font-sans text-haze antialiased;
+  }
+
+  ::selection {
+    @apply bg-magenta text-night;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-teal;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+/* Text med solnedgångsgradient */
+@utility text-sunset {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-amber) 0%,
+    var(--color-coral) 35%,
+    var(--color-magenta) 70%,
+    var(--color-violet) 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+/* Neonglöd på text */
+@utility glow-magenta {
+  text-shadow:
+    0 0 18px color-mix(in oklab, var(--color-magenta) 70%, transparent),
+    0 0 48px color-mix(in oklab, var(--color-magenta) 35%, transparent);
+}
+
+@utility glow-teal {
+  text-shadow:
+    0 0 14px color-mix(in oklab, var(--color-teal) 70%, transparent),
+    0 0 40px color-mix(in oklab, var(--color-teal) 30%, transparent);
+}
+
+/* Filmkorn över hela sidan */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
