@@ -141,7 +141,8 @@ export function Contact() {
               </div>
 
               {/* Luften från felraden till knappen (20 + 20px) = luften under (pb-10) */}
-              <div className="relative pt-5">
+              <div className="relative">
+                <p className="mb-5 text-sm text-muted">{contact.privacy}</p>
                 <button
                   type="submit"
                   disabled={status === 'sending'}

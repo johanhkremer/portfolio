@@ -117,4 +117,6 @@ export const contact = {
   label: 'Kontakt',
   title: 'Hör av dig',
   lead: 'Har du ett projekt, en tjänst eller vill du bara säga hej? Skriv en rad så återkommer jag.',
+  privacy:
+    'Jag använder ditt namn och din e-postadress bara för att svara på ditt meddelande. Uppgifterna sparas inte på webbplatsen och delas inte med andra.',
 }
