@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
 
 const links = [
-  { href: '#maf', label: 'MAF' },
-  { href: '#undervisning', label: 'Undervisning' },
+  { href: '#maf', label: 'Projekt' },
   { href: '#om', label: 'Om mig' },
   { href: '#kontakt', label: 'Kontakt' },
 ]
@@ -10,6 +9,14 @@ const links = [
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
+
+  // Escape stänger mobilmenyn
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -21,18 +28,18 @@ export function Nav() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
-        scrolled || open
-          ? 'border-b border-white/10 bg-night/80 backdrop-blur-md'
-          : 'bg-transparent'
+        open
+          ? 'border-b border-white/10 bg-night/95 backdrop-blur-md'
+          : scrolled
+            ? 'border-b border-white/10 bg-night/80 backdrop-blur-md'
+            : 'bg-transparent'
       }`}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-8">
-        <a
-          href="#top"
-          className="font-display text-3xl text-sunset"
-          aria-label="Till toppen"
-        >
-          JK
+        <a href="#top" className="flex items-center gap-3 text-haze">
+          <span className="font-display text-3xl">JK</span>
+          <span aria-hidden className="h-5 w-px bg-haze/40" />
+          <span className="text-sm font-medium text-haze/80">Portfolio</span>
         </a>
 
         <ul className="hidden gap-8 md:flex">
@@ -40,7 +47,7 @@ export function Nav() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="text-sm font-semibold tracking-[0.2em] text-haze/80 uppercase transition hover:text-magenta"
+                className="text-sm font-medium text-haze/90 transition hover:text-amber"
               >
                 {l.label}
               </a>
@@ -75,7 +82,7 @@ export function Nav() {
               <a
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="block py-2 font-display text-4xl text-haze hover:text-magenta"
+                className="block py-2 font-display text-4xl text-haze hover:text-amber"
               >
                 {l.label}
               </a>

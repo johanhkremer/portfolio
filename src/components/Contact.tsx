@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { contact, site } from '../content'
 import { contactSchema, sendContactEmail } from '../server/contact'
-import { Reveal, SectionHeading } from './Reveal'
+import { GradientText, Reveal, SectionHeading } from './Reveal'
 
 type Status = 'idle' | 'sending' | 'sent' | 'error'
 type Errors = Partial<Record<'name' | 'email' | 'message', string>>
@@ -48,21 +48,25 @@ export function Contact() {
     >
       <div
         aria-hidden
-        className="absolute inset-x-0 bottom-0 -z-10 h-3/4 bg-[radial-gradient(ellipse_at_50%_100%,color-mix(in_oklab,var(--color-magenta)_45%,transparent),color-mix(in_oklab,var(--color-coral)_15%,transparent)_45%,transparent_70%)]"
+        className="absolute inset-x-0 bottom-0 -z-10 h-3/4 bg-[radial-gradient(ellipse_at_50%_100%,color-mix(in_oklab,var(--color-violet)_50%,transparent),color-mix(in_oklab,var(--color-magenta)_10%,transparent)_45%,transparent_70%)]"
       />
 
       <div className="mx-auto grid max-w-7xl gap-14 px-4 sm:px-8 lg:grid-cols-2">
         <div>
-          <SectionHeading label={contact.label} title={contact.title} />
+          <SectionHeading
+            label={contact.label}
+            title={contact.title}
+            tone="rose"
+          />
           <Reveal delay={0.1}>
-            <p className="mt-6 max-w-md text-lg text-haze/85">{contact.lead}</p>
+            <p className="text-lead mt-6 max-w-md">{contact.lead}</p>
             <ul className="mt-10 space-y-3 text-lg">
               <li>
                 <a
                   href={site.linkedin}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-semibold text-haze underline decoration-magenta decoration-2 underline-offset-8 hover:text-magenta"
+                  className="font-semibold text-haze underline decoration-rose decoration-2 underline-offset-8 hover:text-rose"
                 >
                   LinkedIn ↗
                 </a>
@@ -72,7 +76,7 @@ export function Contact() {
                   href={site.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-semibold text-haze underline decoration-teal decoration-2 underline-offset-8 hover:text-teal"
+                  className="font-semibold text-haze underline decoration-rose decoration-2 underline-offset-8 hover:text-rose"
                 >
                   GitHub ↗
                 </a>
@@ -83,18 +87,21 @@ export function Contact() {
 
         <Reveal delay={0.15}>
           {status === 'sent' ? (
-            <div
-              role="status"
-              className="rounded-2xl border border-white/10 bg-night/70 p-10 backdrop-blur"
-            >
-              <p className="font-display text-5xl text-sunset">Tack!</p>
+            <div role="status" className="rounded-xl bg-card p-10">
+              <GradientText
+                as="p"
+                tone="rose"
+                className="font-display text-4xl"
+              >
+                Tack!
+              </GradientText>
               <p className="mt-4 text-lg text-haze/85">
                 Meddelandet är skickat. Jag hör av mig så snart jag kan.
               </p>
               <button
                 type="button"
                 onClick={() => setStatus('idle')}
-                className="mt-8 text-sm font-semibold tracking-[0.2em] text-teal uppercase hover:text-haze"
+                className="mt-8 text-sm font-semibold text-teal hover:text-haze"
               >
                 Skicka ett till
               </button>
@@ -103,9 +110,14 @@ export function Contact() {
             <form
               noValidate
               onSubmit={onSubmit}
-              className="space-y-6 rounded-2xl border border-white/10 bg-night/70 p-6 backdrop-blur sm:p-10"
+              className="space-y-5 rounded-xl bg-card p-6 pb-10 sm:p-10"
             >
-              <Field label="Namn" name="name" error={errors.name} autoComplete="name" />
+              <Field
+                label="Namn"
+                name="name"
+                error={errors.name}
+                autoComplete="name"
+              />
               <Field
                 label="E-post"
                 name="email"
@@ -113,7 +125,12 @@ export function Contact() {
                 error={errors.email}
                 autoComplete="email"
               />
-              <Field label="Meddelande" name="message" error={errors.message} multiline />
+              <Field
+                label="Meddelande"
+                name="message"
+                error={errors.message}
+                multiline
+              />
 
               {/* Honeypot, dold för människor */}
               <div aria-hidden className="absolute -left-[9999px]">
@@ -123,19 +140,24 @@ export function Contact() {
                 </label>
               </div>
 
-              <button
-                type="submit"
-                disabled={status === 'sending'}
-                className="w-full rounded-full bg-[linear-gradient(100deg,var(--color-amber),var(--color-coral)_40%,var(--color-magenta))] px-8 py-4 font-display text-2xl text-night transition hover:brightness-110 disabled:opacity-60"
-              >
-                {status === 'sending' ? 'Skickar…' : 'Skicka'}
-              </button>
+              {/* Luften från felraden till knappen (20 + 20px) = luften under (pb-10) */}
+              <div className="relative pt-5">
+                <button
+                  type="submit"
+                  disabled={status === 'sending'}
+                  className="w-full rounded-full bg-cream px-8 py-4 text-lg font-semibold text-night transition hover:brightness-110 disabled:opacity-60"
+                >
+                  {status === 'sending' ? 'Skickar…' : 'Skicka'}
+                </button>
 
-              {status === 'error' && (
-                <p role="alert" className="text-coral">
-                  Något gick fel. Försök igen eller kontakta mig via LinkedIn.
+                <p
+                  role="alert"
+                  className="absolute inset-x-0 top-full mt-3 text-center text-magenta"
+                >
+                  {status === 'error' &&
+                    'Något gick fel. Försök igen eller kontakta mig via LinkedIn.'}
                 </p>
-              )}
+              </div>
             </form>
           )}
         </Reveal>
@@ -160,16 +182,13 @@ function Field({
   autoComplete?: string
 }) {
   const id = `f-${name}`
-  const cls = `w-full rounded-xl border bg-white/5 px-4 py-3 text-haze placeholder:text-muted/60 transition focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-teal ${
-    error ? 'border-coral' : 'border-white/15'
+  const cls = `w-full rounded-xl border bg-night/60 px-4 py-3 text-haze placeholder:text-muted/60 transition focus:bg-night/80 focus:outline-none focus:ring-2 focus:ring-teal ${
+    error ? 'border-magenta' : 'border-white/10'
   }`
 
   return (
     <div>
-      <label
-        htmlFor={id}
-        className="mb-2 block text-xs font-semibold tracking-[0.25em] text-muted uppercase"
-      >
+      <label htmlFor={id} className="mb-2 block text-sm font-medium text-muted">
         {label}
       </label>
       {multiline ? (
@@ -179,7 +198,7 @@ function Field({
           rows={5}
           className={cls}
           aria-invalid={!!error}
-          aria-describedby={error ? `${id}-err` : undefined}
+          aria-describedby={`${id}-err`}
         />
       ) : (
         <input
@@ -189,14 +208,17 @@ function Field({
           autoComplete={autoComplete}
           className={cls}
           aria-invalid={!!error}
-          aria-describedby={error ? `${id}-err` : undefined}
+          aria-describedby={`${id}-err`}
         />
       )}
-      {error && (
-        <p id={`${id}-err`} className="mt-2 text-sm text-coral">
-          {error}
-        </p>
-      )}
+      {/* Alltid renderad så att layouten inte hoppar när ett fel visas */}
+      <p
+        id={`${id}-err`}
+        aria-live="polite"
+        className="mt-1.5 min-h-5 text-sm text-magenta"
+      >
+        {error}
+      </p>
     </div>
   )
 }

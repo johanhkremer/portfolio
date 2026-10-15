@@ -5,7 +5,10 @@ import { z } from 'zod'
 export const contactSchema = z.object({
   name: z.string().trim().min(2, 'Skriv ditt namn'),
   email: z.email('Ange en giltig e-postadress'),
-  message: z.string().trim().min(10, 'Meddelandet behöver vara minst 10 tecken'),
+  message: z
+    .string()
+    .trim()
+    .min(10, 'Meddelandet behöver vara minst 10 tecken'),
   // Honeypot: ett dolt fält som bara bottar fyller i
   company: z.string().optional(),
 })
