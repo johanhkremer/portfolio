@@ -29,7 +29,7 @@ export function MafCase() {
           >
             <p className="text-lead">{maf.summary}</p>
             <p className="mt-4 text-muted">{maf.role}</p>
-            <ul className="mt-6 flex flex-wrap gap-2">
+            <ul className="mt-8 flex flex-wrap gap-2">
               {maf.facts.map((f) => (
                 <li
                   key={f.label}
