@@ -75,7 +75,7 @@ export function Hero() {
           {hero.kicker}
         </p>
 
-        <h1 className="font-display drop-shadow-[0_2px_24px_rgba(20,10,30,0.55)] text-[clamp(3rem,min(9vw,13svh),6.5rem)] leading-[1.08] text-haze">
+        <h1 className="font-display drop-shadow-[0_2px_24px_rgba(20,10,30,0.55)] text-[clamp(2.5rem,min(11vw,13svh),6.5rem)] leading-[1.08] text-haze">
           {hero.lines.map((line, i) => (
             <motion.span
               key={line}

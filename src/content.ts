@@ -25,9 +25,9 @@ export const credits = {
 }
 
 export const hero = {
-  kicker: 'Malmö · Webbutveckling · Undervisning',
-  lines: ['Bygger', 'webben.', 'Lär ut den.'],
-  lead: 'Jag är webbutvecklare och lärare på yrkeshögskolan. Jag bygger tillgängliga, snabba sajter och hjälper nya utvecklare att göra detsamma.',
+  kicker: 'Malmö · Webbutveckling',
+  lines: ['Johan', 'Kremer', 'Webbutvecklare.'],
+  lead: 'Jag bygger webbplatser med React och TypeScript. Jag undervisar också i webbutveckling på yrkeshögskola.',
 }
 
 export const maf = {
@@ -61,8 +61,8 @@ export const maf = {
 
 export const teaching = {
   label: 'Undervisning',
-  title: 'Lärare på YH',
-  lead: 'Jag undervisar i webbutveckling på yrkeshögskolan. Efter över tio år som lärare vet jag att det bästa sättet att förstå något är att förklara det för någon annan.',
+  title: 'Undervisar i kod',
+  lead: 'Jag undervisar i webbutveckling på yrkeshögskola, från HTML och CSS till React. Att förklara kod för andra gör mig bättre på att skriva den själv.',
   courses: [
     {
       tag: 'Webbgrunder',
