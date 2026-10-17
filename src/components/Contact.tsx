@@ -135,8 +135,14 @@ export function Contact() {
               {/* Honeypot, dold för människor */}
               <div aria-hidden className="absolute -left-[9999px]">
                 <label>
-                  Företag
-                  <input name="company" tabIndex={-1} autoComplete="off" />
+                  Lämna det här fältet tomt
+                  <input
+                    name="hp_ref"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    data-lpignore="true"
+                    data-1p-ignore
+                  />
                 </label>
               </div>
 

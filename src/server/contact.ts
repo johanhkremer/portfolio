@@ -10,7 +10,8 @@ export const contactSchema = z.object({
     .trim()
     .min(10, 'Meddelandet behöver vara minst 10 tecken'),
   // Honeypot: ett dolt fält som bara bottar fyller i
-  company: z.string().optional(),
+  // Heter inte company/website/url e.d., då fyller webbläsarens autofyll i det
+  hp_ref: z.string().optional(),
 })
 
 export type ContactInput = z.infer<typeof contactSchema>
@@ -19,7 +20,8 @@ export const sendContactEmail = createServerFn({ method: 'POST' })
   .validator(contactSchema)
   .handler(async ({ data }) => {
     // Låtsas att det gick bra för bottar, men skicka inget
-    if (data.company) {
+    if (data.hp_ref) {
+      console.warn('Kontaktformulär: honeypot ifyllt, meddelandet skickas inte')
       return { ok: true }
     }
 
