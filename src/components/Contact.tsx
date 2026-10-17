@@ -60,27 +60,24 @@ export function Contact() {
           />
           <Reveal delay={0.1}>
             <p className="text-lead mt-6 max-w-md">{contact.lead}</p>
-            <ul className="mt-10 space-y-3 text-lg">
-              <li>
-                <a
-                  href={site.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-semibold text-haze underline decoration-rose decoration-2 underline-offset-8 hover:text-rose"
-                >
-                  LinkedIn ↗
-                </a>
-              </li>
-              <li>
-                <a
-                  href={site.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-semibold text-haze underline decoration-rose decoration-2 underline-offset-8 hover:text-rose"
-                >
-                  GitHub ↗
-                </a>
-              </li>
+            <ul className="mt-10 flex flex-wrap gap-3">
+              {[
+                { label: 'LinkedIn', href: site.linkedin },
+                { label: 'GitHub', href: site.github },
+              ].map((l) => (
+                <li key={l.label}>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-lg font-semibold text-haze transition hover:border-rose hover:bg-white/5 hover:text-rose"
+                  >
+                    {l.label}
+                    <span aria-hidden>↗</span>
+                    <span className="sr-only">(öppnas i ny flik)</span>
+                  </a>
+                </li>
+              ))}
             </ul>
           </Reveal>
         </div>
@@ -135,8 +132,14 @@ export function Contact() {
               {/* Honeypot, dold för människor */}
               <div aria-hidden className="absolute -left-[9999px]">
                 <label>
-                  Företag
-                  <input name="company" tabIndex={-1} autoComplete="off" />
+                  Lämna det här fältet tomt
+                  <input
+                    name="hp_ref"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    data-lpignore="true"
+                    data-1p-ignore
+                  />
                 </label>
               </div>
 
