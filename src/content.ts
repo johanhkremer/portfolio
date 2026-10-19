@@ -5,13 +5,13 @@ export const site = {
   // TODO: byt till din egen domän om du skaffar en (påverkar og:url, canonical och sitemap)
   url: 'https://portfolio-johan-kremer.vercel.app',
   name: 'Johan Kremer',
-  role: 'Webbutvecklare & YH-lärare',
+  role: 'Utvecklare',
   location: 'Malmö',
   email: 'johan.h.kremer@gmail.com',
   github: 'https://github.com/johanhkremer',
   linkedin: 'https://www.linkedin.com/in/johan-kremer',
   description:
-    'Johan Kremer – webbutvecklare och YH-lärare i Malmö. Bygger tillgängliga webbplatser med React och TypeScript och är van vid att arbeta med AI.',
+    'Johan Kremer – utvecklare i Malmö. Arbetar med gränssnitt, backend och databaser, och är van vid att arbeta med AI.',
 }
 
 export const credits = {
@@ -25,9 +25,9 @@ export const credits = {
 }
 
 export const hero = {
-  kicker: 'Malmö · Webbutveckling',
-  lines: ['Johan', 'Kremer', 'Webbutvecklare.'],
-  lead: 'Jag bygger webbplatser med React och TypeScript. Jag undervisar också i webbutveckling på yrkeshögskola.',
+  kicker: 'Malmö · Utveckling',
+  lines: ['Bygger', 'lösningar.', 'Lär ut dem.'],
+  lead: 'Jag arbetar med utveckling, från gränssnitt till backend och databaser. Jag har också erfarenhet av att undervisa.',
 }
 
 export const maf = {
