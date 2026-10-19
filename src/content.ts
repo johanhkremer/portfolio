@@ -89,10 +89,10 @@ export const teaching = {
 
 export const about = {
   label: 'Om mig',
-  title: 'Lärare som blev utvecklare',
+  title: 'Utvecklare med lärarbakgrund',
   paragraphs: [
-    'Jag var lärare i över tio år. Jag utvecklade kurser och tog in 3D-utskrifter i klassrummet långt innan det var självklart. Nyfikenheten på teknik tog till slut över, och jag utbildade mig till frontendutvecklare.',
-    'I dag kombinerar jag båda: jag bygger webbplatser och undervisar blivande utvecklare. Erfarenheten från klassrummet märks i hur jag samarbetar, kommunicerar och löser problem.',
+    'Jag är utbildad frontendutvecklare och har byggt bland annat MAF:s nya webbplats från idé till lansering. Nyfikenheten på teknik tog över efter över tio år som lärare.',
+    'Åren i klassrummet märks i hur jag samarbetar, kommunicerar och löser problem. Jag utvecklade kurser och tog in 3D-utskrifter långt innan det var självklart, och jag undervisar fortfarande i webbutveckling vid sidan av.',
     'Jag är också van vid att arbeta med AI-verktyg som Claude och ChatGPT, både i utvecklingen och i undervisningen.',
   ],
   skills: [
