@@ -5,13 +5,13 @@ export const site = {
   // TODO: byt till din egen domän om du skaffar en (påverkar og:url, canonical och sitemap)
   url: 'https://portfolio-johan-kremer.vercel.app',
   name: 'Johan Kremer',
-  role: 'Webbutvecklare & YH-lärare',
+  role: 'Utvecklare',
   location: 'Malmö',
   email: 'johan.h.kremer@gmail.com',
   github: 'https://github.com/johanhkremer',
   linkedin: 'https://www.linkedin.com/in/johan-kremer',
   description:
-    'Johan Kremer – webbutvecklare och YH-lärare i Malmö. Bygger tillgängliga webbplatser med React och TypeScript och är van vid att arbeta med AI.',
+    'Johan Kremer – utvecklare i Malmö. Arbetar med gränssnitt, backend och databaser, och är van vid att arbeta med AI.',
 }
 
 export const credits = {
@@ -25,9 +25,9 @@ export const credits = {
 }
 
 export const hero = {
-  kicker: 'Malmö · Webbutveckling · Undervisning',
-  lines: ['Bygger', 'webben.', 'Lär ut den.'],
-  lead: 'Jag är webbutvecklare och lärare på yrkeshögskolan. Jag bygger tillgängliga, snabba sajter och hjälper nya utvecklare att göra detsamma.',
+  kicker: 'Malmö · Utveckling',
+  lines: ['Bygger', 'lösningar.', 'Lär ut dem.'],
+  lead: 'Jag arbetar med utveckling, från gränssnitt till backend och databaser. Jag har också erfarenhet av att undervisa.',
 }
 
 export const maf = {
@@ -61,8 +61,8 @@ export const maf = {
 
 export const teaching = {
   label: 'Undervisning',
-  title: 'Lärare på YH',
-  lead: 'Jag undervisar i webbutveckling på yrkeshögskolan. Efter över tio år som lärare vet jag att det bästa sättet att förstå något är att förklara det för någon annan.',
+  title: 'Undervisar i kod',
+  lead: 'Jag undervisar i webbutveckling på yrkeshögskola, från HTML och CSS till React. Att förklara kod för andra gör mig bättre på att skriva den själv.',
   courses: [
     {
       tag: 'Webbgrunder',
@@ -89,10 +89,10 @@ export const teaching = {
 
 export const about = {
   label: 'Om mig',
-  title: 'Lärare som blev utvecklare',
+  title: 'Utvecklare med lärarbakgrund',
   paragraphs: [
-    'Jag var lärare i över tio år. Jag utvecklade kurser och tog in 3D-utskrifter i klassrummet långt innan det var självklart. Nyfikenheten på teknik tog till slut över, och jag utbildade mig till frontendutvecklare.',
-    'I dag kombinerar jag båda: jag bygger webbplatser och undervisar blivande utvecklare. Erfarenheten från klassrummet märks i hur jag samarbetar, kommunicerar och löser problem.',
+    'Jag är utbildad frontendutvecklare och har byggt bland annat MAF:s nya webbplats från idé till lansering. Nyfikenheten på teknik tog över efter över tio år som lärare.',
+    'Åren i klassrummet märks i hur jag samarbetar, kommunicerar och löser problem. Jag utvecklade kurser och tog in 3D-utskrifter långt innan det var självklart, och jag undervisar fortfarande i webbutveckling vid sidan av.',
     'Jag är också van vid att arbeta med AI-verktyg som Claude och ChatGPT, både i utvecklingen och i undervisningen.',
   ],
   skills: [
