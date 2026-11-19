@@ -1,10 +1,10 @@
-import { teaching } from '../content'
+import { approach } from '../content'
 import { Reveal, SectionHeading } from './Reveal'
 
-export function Teaching() {
+export function Approach() {
   return (
     <section
-      id="undervisning"
+      id="arbetssatt"
       className="relative isolate overflow-hidden bg-[linear-gradient(180deg,#3a2447,var(--color-dusk)_35%,var(--color-dusk))] py-28 sm:py-40"
     >
       {/* Avdelare mot MAF-sektionen ovanför */}
@@ -15,17 +15,17 @@ export function Teaching() {
       <div className="mx-auto max-w-7xl px-4 sm:px-8">
         <div className="grid gap-10 lg:grid-cols-2 lg:items-end">
           <SectionHeading
-            label={teaching.label}
-            title={teaching.title}
+            label={approach.label}
+            title={approach.title}
             tone="rose"
           />
           <Reveal delay={0.1}>
-            <p className="text-lead">{teaching.lead}</p>
+            <p className="text-lead">{approach.lead}</p>
           </Reveal>
         </div>
 
         <ul className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {teaching.courses.map((c, i) => (
+          {approach.items.map((c, i) => (
             <li key={c.title}>
               <Reveal delay={i * 0.08} className="h-full">
                 <article

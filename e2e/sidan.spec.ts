@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test'
 
-const sektioner = ['top', 'maf', 'undervisning', 'om', 'kontakt']
+const sektioner = ['top', 'maf', 'arbetssatt', 'om', 'kontakt']
 
 test('inget horisontellt scroll', async ({ page }) => {
   await page.goto('/')
