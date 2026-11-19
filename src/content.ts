@@ -11,7 +11,7 @@ export const site = {
   github: 'https://github.com/johanhkremer',
   linkedin: 'https://www.linkedin.com/in/johan-kremer',
   description:
-    'Johan Kremer – utvecklare i Malmö. Arbetar med gränssnitt, backend och databaser, och är van vid att arbeta med AI.',
+    'Johan Kremer – frontend- och fullstackutvecklare i Malmö. Bygger webbappar med React, Next.js och TypeScript, från behovsanalys till lansering.',
 }
 
 export const credits = {
@@ -25,9 +25,9 @@ export const credits = {
 }
 
 export const hero = {
-  kicker: 'Malmö · Utveckling',
-  lines: ['Bygger', 'lösningar.', 'Lär ut dem.'],
-  lead: 'Jag arbetar med utveckling, från gränssnitt till backend och databaser. Jag har också erfarenhet av att undervisa.',
+  kicker: 'Malmö · Frontend & fullstack',
+  lines: ['Från idé', 'till färdig', 'webbapp.'],
+  lead: 'Jag är utvecklare och bygger med React, Next.js och TypeScript. Jag tar lösningen hela vägen, från behovsanalys och design till lansering, och ser till att de som ska använda den kan göra det.',
 }
 
 export const maf = {
@@ -36,7 +36,7 @@ export const maf = {
   subtitle: 'Malmö Amatörteater Forum',
   summary:
     'En ny webbplats för Malmös amatörteaterförening. Föreställningar, nyheter, medlemskap och kontakt, med ett CMS som redaktörerna själva kan sköta.',
-  role: 'Utveckling från idé till lansering: behovsanalys, MVP, design efter grafisk profil, utveckling och redaktörsutbildning.',
+  role: 'Jag ansvarade för hela leveransen: behovsanalys tillsammans med styrelsen, MVP, design efter grafisk profil, utveckling, lansering och utbildning av redaktörerna.',
   url: 'https://m-a-f.org',
   facts: [
     { label: 'Ramverk', value: 'Next.js (App Router)' },
@@ -59,30 +59,30 @@ export const maf = {
   ],
 }
 
-export const teaching = {
-  label: 'Undervisning',
-  title: 'Undervisar i kod',
-  lead: 'Jag undervisar i webbutveckling på yrkeshögskola, från HTML och CSS till React. Att förklara kod för andra gör mig bättre på att skriva den själv.',
-  courses: [
+export const approach = {
+  label: 'Arbetssätt',
+  title: 'Så jobbar jag',
+  lead: 'Jag bryr mig om hela vägen: att förstå behovet, bygga något som håller och se till att det faktiskt används.',
+  items: [
     {
-      tag: 'Webbgrunder',
-      title: 'HTML & CSS',
-      text: 'Semantisk HTML, responsiv layout och modern CSS, från första sidan till en skalbar och tillgänglig webbplats.',
+      tag: 'Behov',
+      title: 'Från behov till lansering',
+      text: 'Jag börjar med frågorna: vem ska använda det och vad måste fungera? Sedan en MVP, och därefter förbättringar i små steg tillsammans med kunden.',
     },
     {
-      tag: 'Programmering',
-      title: 'JavaScript',
-      text: 'Språkets grunder, DOM-manipulation och felsökning, från första variabeln till interaktiva webbsidor med formulär och validering.',
+      tag: 'Kvalitet',
+      title: 'Tester och tillgänglighet',
+      text: 'Typsäker kod, semantisk HTML och automatiska tester. Den här sajten testas med Playwright i mobil- och desktopläge, med och utan reducerad rörelse.',
     },
     {
-      tag: 'Samarbete',
-      title: 'Versionshantering',
-      text: 'Git och GitHub: commits, branches och pull requests, så att man kan samarbeta i kod utan att tappa kontrollen över versionerna.',
+      tag: 'Kommunikation',
+      title: 'Teknik som går att förstå',
+      text: 'Tio år som lärare har gjort mig van att förklara tekniska val för kunder och kollegor, dokumentera tydligt och utbilda dem som ska ta över.',
     },
     {
-      tag: 'Frontend',
-      title: 'React & Next.js',
-      text: 'Komponenter, props, routing och formulär med React och Vite, samt Next.js App Router. Slutar i en egen app.',
+      tag: 'AI',
+      title: 'AI som verktyg',
+      text: 'Jag använder AI-verktyg som Claude och ChatGPT dagligen för att utveckla snabbare, och granskar alltid resultatet med egna ögon.',
     },
   ],
 }
@@ -91,9 +91,9 @@ export const about = {
   label: 'Om mig',
   title: 'Utvecklare med lärarbakgrund',
   paragraphs: [
-    'Jag är utbildad frontendutvecklare och har byggt bland annat MAF:s nya webbplats från idé till lansering. Nyfikenheten på teknik tog över efter över tio år som lärare.',
-    'Åren i klassrummet märks i hur jag samarbetar, kommunicerar och löser problem. Jag utvecklade kurser och tog in 3D-utskrifter långt innan det var självklart, och jag undervisar fortfarande i webbutveckling vid sidan av.',
-    'Jag är också van vid att arbeta med AI-verktyg som Claude och ChatGPT, både i utvecklingen och i undervisningen.',
+    'Jag är utbildad frontendutvecklare från Medieinstitutet och har gjort två LIA-perioder på Omegapoint, där jag byggde gränssnitt i Next.js och TypeScript i ett agilt team. Sedan dess har jag bland annat byggt MAF:s nya webbplats från idé till lansering.',
+    'Innan dess var jag lärare i över tio år, tills nyfikenheten på teknik tog över. Det märks i hur jag samarbetar, kommunicerar och löser problem, och jag undervisar fortfarande i webbutveckling på yrkeshögskola.',
+    'Nu söker jag en roll som utvecklare i ett team där jag får bygga, lära mig av andra och ha nytta av att jag är bra på att få teknik att fungera för människor.',
   ],
   skills: [
     'TypeScript',
@@ -105,17 +105,19 @@ export const about = {
     'PostgreSQL',
     'Prisma / Drizzle',
     'Sanity',
+    'Playwright',
+    'Vitest',
+    'Git & GitHub',
     'Figma',
     'Tillgänglighet',
-    'Claude',
-    'ChatGPT',
+    'AI-verktyg',
   ],
 }
 
 export const contact = {
   label: 'Kontakt',
   title: 'Hör av dig',
-  lead: 'Har du ett projekt, en tjänst eller vill du bara säga hej? Skriv en rad så återkommer jag.',
+  lead: 'Söker ni en utvecklare till ert team, har du ett projekt eller vill du bara säga hej? Skriv en rad så återkommer jag.',
   privacy:
     'Jag använder ditt namn och din e-postadress bara för att svara på ditt meddelande. Uppgifterna sparas inte på webbplatsen och delas inte med andra.',
 }

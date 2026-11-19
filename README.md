@@ -13,7 +13,7 @@ npm run dev                  # http://localhost:3000
 ## Struktur
 
 - `src/content.ts` – all text på sidan (ändra här)
-- `src/components/` – sektionerna: Hero, MafCase, Teaching, About, Contact
+- `src/components/` – sektionerna: Hero, MafCase, Approach (arbetssätt), About, Contact
 - `src/server/contact.ts` – server function som skickar kontaktformuläret via Resend
 - `src/styles.css` – färgtema (dov plommonpalett med gult, aprikos och rosa), typsnitt
   (Outfit, Anton för etiketter) och gradienttext
